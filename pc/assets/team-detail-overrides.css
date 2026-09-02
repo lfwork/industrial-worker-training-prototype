@@ -1,0 +1,6 @@
+.team-detail-info{grid-template-columns:repeat(2,1fr);row-gap:4px}
+.team-detail-info>div{min-height:0;padding:6px 15px;border:0;background:transparent;display:flex;align-items:baseline;gap:14px}
+.team-detail-info span{flex:0 0 56px}
+.team-detail-info strong{margin-top:0}
+.text-action{margin-left:12px;padding:0;border:0;background:transparent;color:#347cff;font-size:12px;font-weight:400;cursor:pointer}
+.acceptance-card>.proto-button,.order-summary-card>.proto-button{display:none}

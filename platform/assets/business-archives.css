@@ -1,0 +1,74 @@
+.archive-page .content-card{min-height:calc(100vh - 112px)}
+.archive-filter{padding:20px 24px;border-bottom:1px solid #e6edf5;background:#fff}
+.archive-filter-grid{display:grid;grid-template-columns:repeat(4,minmax(180px,1fr));gap:16px 18px;align-items:end}
+.archive-filter .field{min-width:0}
+.archive-filter .field label{display:block;margin-bottom:8px;color:#53657d;font-size:14px}
+.archive-filter .control{width:100%}
+.archive-filter-actions{display:flex;gap:10px;align-items:center}
+.archive-list-meta{display:flex;align-items:center;justify-content:space-between;padding:16px 24px 10px;color:#6d7f96;font-size:14px}
+.archive-list-meta strong{color:#172b4d;font-size:16px}
+.archive-table-wrap{padding:0 24px}
+.archive-table-wrap .standard-table-shell{border:1px solid #e6edf5;border-radius:4px}
+.archive-table-wrap .standard-table{min-width:1380px}
+.archive-table-wrap .standard-table th,.archive-table-wrap .standard-table td{white-space:nowrap}
+.archive-table-wrap .standard-table td.name-cell strong{display:block;color:#102a4c}
+.archive-table-wrap .standard-table td.name-cell span{display:block;margin-top:3px;color:#8392a7;font-size:12px}
+.archive-page .pagination{padding:18px 24px 24px}
+.archive-empty{padding:38px!important;text-align:center;color:#8796aa}
+
+.archive-detail-body{padding:22px 24px 30px}
+.archive-hero{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding:18px 20px;border:1px solid #e4ebf4;background:#f8fbff}
+.archive-hero-main{display:flex;gap:14px;min-width:0}
+.archive-hero-icon{display:flex;align-items:center;justify-content:center;flex:0 0 48px;width:48px;height:48px;border-radius:8px;background:#eaf2ff;color:#3478f6}
+.archive-hero-icon svg{width:24px;height:24px}
+.archive-hero h2{margin:0;color:#102a4c;font-size:20px;line-height:1.4}
+.archive-hero p{margin:6px 0 0;color:#71839b;font-size:13px}
+.archive-hero-side{text-align:right;white-space:nowrap}
+.archive-hero-side .hero-result{display:block;margin-bottom:8px;color:#15345c;font-size:20px;font-weight:700}
+.archive-section{margin-top:18px;border:1px solid #e4ebf4;background:#fff}
+.archive-section-head{display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 18px;border-bottom:1px solid #e8eef5}
+.archive-section-head h2{margin:0;color:#102a4c;font-size:17px}
+.archive-section-body{padding:18px}
+.archive-detail-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px 24px}
+.archive-detail-item{min-width:0}
+.archive-detail-item .label{display:block;margin-bottom:5px;color:#8290a5;font-size:13px}
+.archive-detail-item .value{display:block;color:#1c3557;line-height:1.55;word-break:break-word}
+.archive-detail-item.span-2{grid-column:span 2}
+.archive-detail-item.span-4{grid-column:span 4}
+.archive-kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.archive-kpi{padding:15px 16px;border:1px solid #e2eaf4;background:#f8fafc}
+.archive-kpi span{display:block;color:#74869e;font-size:13px}
+.archive-kpi strong{display:block;margin-top:7px;color:#102a4c;font-size:22px}
+.archive-score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.archive-score{padding:16px;border:1px solid #dfe8f3;background:#f9fbfe;text-align:center}
+.archive-score span{display:block;color:#75869d;font-size:13px}
+.archive-score strong{display:block;margin-top:7px;color:#17385f;font-size:24px}
+.archive-related-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.archive-related-card{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px;border:1px solid #dfe8f3;background:#fbfdff}
+.archive-related-card h3{margin:0;color:#173356;font-size:15px}
+.archive-related-card p{margin:6px 0 0;color:#7b8ca2;font-size:13px}
+.archive-related-card .actions{display:flex;gap:12px;white-space:nowrap}
+.archive-material-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.archive-material{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border:1px solid #e3eaf3;background:#fff}
+.archive-material strong{display:block;color:#193554;font-size:14px}
+.archive-material span{display:block;margin-top:4px;color:#8291a5;font-size:12px}
+.archive-table{width:100%;border-collapse:collapse}
+.archive-table th{padding:13px 14px;background:#f1f5fa;color:#40536d;text-align:left;font-size:13px}
+.archive-table td{padding:14px;border-bottom:1px solid #e8eef5;color:#2e4664;font-size:14px}
+.archive-table tr:last-child td{border-bottom:0}
+.archive-status{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:3px;font-size:12px}
+.archive-status::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.archive-status.green{color:#15935b;background:#eaf8f1}
+.archive-status.blue{color:#2f73df;background:#eaf2ff}
+.archive-status.orange{color:#c97600;background:#fff4df}
+.archive-status.red{color:#d64f4f;background:#fff0f0}
+.archive-status.gray{color:#718096;background:#eef1f5}
+.archive-note-value{padding:14px 16px;border-left:3px solid #3f7ff1;background:#f4f8ff;color:#29425f;line-height:1.7}
+.archive-inline-actions{display:flex;gap:14px;align-items:center}
+.archive-inline-actions .link{font-weight:500}
+.archive-page[data-archive-list] .archive-table-wrap .standard-table th.sticky-op,
+.archive-page[data-archive-list] .archive-table-wrap .standard-table td.sticky-op{width:96px;min-width:96px;text-align:center}
+.archive-page[data-archive-list] .archive-table-wrap .standard-table td.sticky-op>a{display:inline;color:#3478f6;font-size:13px;font-weight:500;line-height:1.4;text-decoration:none;transition:color .15s ease}
+.archive-page[data-archive-list] .archive-table-wrap .standard-table td.sticky-op>a:hover{color:#2167db;text-decoration:underline}
+.archive-page[data-archive-list] .archive-table-wrap .standard-table td.sticky-op>a:focus-visible{outline:2px solid rgba(52,120,246,.28);outline-offset:2px}
+@media (max-width:1200px){.archive-filter-grid{grid-template-columns:repeat(3,minmax(180px,1fr))}.archive-detail-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.archive-detail-item.span-4{grid-column:span 2}}

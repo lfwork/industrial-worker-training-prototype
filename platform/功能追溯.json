@@ -1,0 +1,95 @@
+{
+  "source": "新工种产业工人平台6端产品研发排期清单_V2.xlsx / 6端功能清单 / 平台运营端",
+  "retained_function_count": 20,
+  "prototype_page_count": 44,
+  "business_rules": [
+    "报名订单统一包含培训费和考试费",
+    "不开放个人或团队考试报名，由培训机构统一送考",
+    "平台仅跟踪送考进度，资格结论由评价机构作出",
+    "机构入驻审核不在一期范围"
+  ],
+  "coverage": {
+    "工作台": [
+      "workbench.html"
+    ],
+    "Banner管理": [
+      "banner-list.html",
+      "banner-detail.html",
+      "banner-edit.html"
+    ],
+    "通知公告管理": [
+      "notice-list.html",
+      "notice-detail.html",
+      "notice-edit.html"
+    ],
+    "政策管理-政策资讯/政策补贴": [
+      "policy-list.html",
+      "policy-detail.html",
+      "policy-edit.html",
+      "policy-subsidy-detail.html",
+      "policy-subsidy-edit.html"
+    ],
+    "课程发布审核": [
+      "course-audit-list.html",
+      "course-audit-detail.html"
+    ],
+    "课程管理": [
+      "course-list.html",
+      "course-detail.html"
+    ],
+    "班次管理": [
+      "class-list.html",
+      "class-detail.html"
+    ],
+    "考试项目审核": [
+      "evaluation-audit-list.html",
+      "evaluation-audit-detail.html"
+    ],
+    "考试管理": [
+      "exam-list.html",
+      "exam-detail.html"
+    ],
+    "培训机构管理": [
+      "training-org-list.html",
+      "training-org-detail.html",
+      "training-org-edit.html"
+    ],
+    "评价机构管理": [
+      "evaluation-org-list.html",
+      "evaluation-org-detail.html",
+      "evaluation-org-edit.html"
+    ],
+    "报名记录": [
+      "registration-record-list.html",
+      "registration-record-detail.html"
+    ],
+    "报名订单": [
+      "order-list.html",
+      "order-detail.html"
+    ],
+    "送考批次台账": [
+      "send-batch-list.html",
+      "send-batch-detail.html"
+    ],
+    "送考进度": [
+      "send-progress-list.html",
+      "send-progress-detail.html"
+    ],
+    "一人一档": [
+      "person-dossier-list.html",
+      "person-dossier-detail.html"
+    ],
+    "培训档案": [
+      "training-archive-list.html",
+      "training-archive-detail.html"
+    ],
+    "考试档案": [
+      "exam-archive-list.html",
+      "exam-archive-detail.html"
+    ],
+    "证书档案": [
+      "certificate-archive-list.html",
+      "certificate-archive-detail.html"
+    ]
+  }
+}

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="绿色智能建造新工种培训课程班次详情演示原型" />
+  <title>建筑信息模型技术员实务班｜产业培育专区</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/v03-overrides.css" />
+  <link rel="stylesheet" href="assets/course-detail.css" />
+  <link rel="stylesheet" href="assets/compat.css" />
+  <style>.schedule-row{grid-template-columns:100px 1.5fr 120px 90px 150px}@media(max-width:1200px){.schedule-row{grid-template-columns:90px 1.4fr 105px 75px 125px}}</style>
+</head>
+<body>
+  <header class="platform-header">
+    <div class="platform-head-inner">
+      <a class="platform-brand" href="首页.html" aria-label="湖北省智能建造产业互联网平台首页"><img src="assets/platform-logo.png" alt="湖北省智能建造产业互联网平台"></a>
+      <form class="platform-search" id="platform-search">
+        <label class="sr-only" for="global-keyword">平台搜索</label>
+        <input id="global-keyword" placeholder="请输入企业、商品、服务或商机名称…" autocomplete="off" />
+        <button type="submit"><i data-lucide="search"></i>搜索</button>
+        <div class="hot-words">热门搜索：<button type="button">机器人</button><button type="button">装配式</button><button type="button">预制</button><button type="button">施工平台</button></div>
+      </form>
+      <div class="platform-account">
+        <div class="welcome"><span class="avatar"><i data-lucide="user-round"></i></span><span>下午好</span><button id="login-button" type="button">登录/注册</button></div>
+        <div class="platform-actions">
+          <button type="button" data-demo="发布需求"><i data-lucide="upload"></i>发布需求</button>
+          <button type="button" data-demo="新增供应"><i data-lucide="square-pen"></i>新增供应</button>
+          <button type="button" data-demo="消息通知"><i data-lucide="mail"></i>消息通知</button>
+          <button type="button" data-demo="企业信息"><i data-lucide="building-2"></i>企业信息</button>
+        </div>
+      </div>
+    </div>
+    <nav class="platform-nav" aria-label="平台一级业务导航">
+      <div class="platform-nav-inner">
+        <a href="#" data-demo="平台首页"><i data-lucide="house"></i>首页</a>
+        <a href="#" data-demo="智建商城"><i data-lucide="shopping-bag"></i>智建商城</a>
+        <a href="#" data-demo="招标信息"><i data-lucide="notebook-tabs"></i>招标信息</a>
+        <a href="#" data-demo="金融服务"><i data-lucide="shield-check"></i>金融服务</a>
+        <a href="#" data-demo="建筑科技"><i data-lucide="building"></i>建筑科技</a>
+        <a class="active" href="首页.html" aria-current="page"><i data-lucide="graduation-cap"></i>产业培育</a>
+        <a href="#" data-demo="品牌专区"><i data-lucide="crown"></i>品牌专区</a>
+        <a href="#" data-demo="政策资讯"><i data-lucide="newspaper"></i>政策资讯</a>
+        <a href="#" data-demo="关于我们"><i data-lucide="circle-alert"></i>关于我们</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="zone-nav-wrap" id="top">
+    <nav class="zone-nav" aria-label="培训考试专区导航">
+      <div class="zone-nav-public">
+        <a href="首页.html">专区首页</a>
+          <a class="active" href="培训课程.html" aria-current="page">培训课程</a>
+          <a href="考试服务.html">考试服务</a>
+      </div>
+      <div class="zone-nav-personal">
+        <button type="button" id="my-center-button"><i data-lucide="user-round"></i>我的培训考试</button>
+          <a href="证书真伪查询.html"><i data-lucide="badge-check"></i>证书查验</a>
+      </div>
+    </nav>
+  </div>
+
+  <main class="detail-page">
+    <div class="detail-breadcrumb" aria-label="面包屑导航">
+      <a href="首页.html">产业培育</a><i data-lucide="chevron-right"></i>
+        <a href="培训课程.html">培训课程</a><i data-lucide="chevron-right"></i>
+      <span>课程详情</span>
+    </div>
+
+    <section class="course-summary" aria-labelledby="course-title">
+      <div class="course-identity">
+        <div class="course-mark" aria-hidden="true"><i data-lucide="cuboid"></i><span>BIM</span></div>
+        <div class="course-heading">
+          <div class="course-status-line"><span>建筑信息模型技术员</span><span>线上培训</span><b><i></i>报名中</b></div>
+          <h1 id="course-title">建筑信息模型技术员实务班</h1>
+          <a class="course-org" href="#provider"><i data-lucide="building-2"></i>武汉绿色建造职业培训中心（模拟）<i data-lucide="chevron-right"></i></a>
+        </div>
+      </div>
+      <div class="course-facts" aria-label="班次主要信息">
+        <div><i data-lucide="calendar-days"></i><span>培训时间<strong>2026-10-12 至 11-15</strong></span></div>
+        <div><i data-lucide="clock-3"></i><span>培训学时<strong>48学时</strong></span></div>
+        <div><i data-lucide="monitor-play"></i><span>培训方式<strong>在线学习</strong></span></div>
+        <div><i data-lucide="users"></i><span>招生名额<strong>50人 · 余36人</strong></span></div>
+      </div>
+    </section>
+
+    <div class="detail-layout">
+      <div class="detail-content">
+        <nav class="detail-tabs" id="detail-tabs" aria-label="课程详情内容导航">
+          <button class="active" type="button" data-target="overview">课程介绍</button>
+          <button type="button" data-target="schedule">培训安排</button>
+          <button type="button" data-target="requirements">完成条件</button>
+          <button type="button" data-target="materials">报名材料</button>
+          <button type="button" data-target="subsidy">补贴说明</button>
+          <button type="button" data-target="provider">承训机构</button>
+        </nav>
+
+        <section class="detail-section" id="overview">
+          <div class="section-title"><span>01</span><div><h2>课程介绍</h2></div></div>
+          <p class="lead-text">课程依据绿色智能建造产业领域重点培训工种相关要求设置，以建筑信息模型创建、深化和工程协同应用为主线，采用线上理论学习与案例演练相结合的方式组织培训。</p>
+          <div class="learning-grid">
+            <article><i data-lucide="box"></i><div><h3>BIM建模基础</h3><p>掌握模型创建、构件参数、视图表达和成果输出的基本方法。</p></div></article>
+            <article><i data-lucide="layers-3"></i><div><h3>专业模型深化</h3><p>理解建筑、结构、机电专业模型深化和常见问题处理。</p></div></article>
+            <article><i data-lucide="network"></i><div><h3>模型整合协同</h3><p>学习模型整合、碰撞检查、问题协同和版本管理。</p></div></article>
+            <article><i data-lucide="briefcase-business"></i><div><h3>工程项目应用</h3><p>结合典型项目认识BIM在施工策划和现场管理中的应用。</p></div></article>
+          </div>
+        </section>
+
+        <section class="detail-section" id="schedule">
+          <div class="section-title"><span>02</span><div><h2>培训安排</h2></div></div>
+          <div class="schedule-table" role="table" aria-label="课程培训安排">
+            <div class="schedule-row header" role="row"><span>章节</span><span>课程名称</span><span>形式</span><span>学时</span><span>完成要求</span></div>
+            <div class="schedule-row" role="row"><strong>课时1</strong><span>BIM基础与协同建模</span><span>线上理论</span><b>8学时</b><span>有效学习100%</span></div>
+            <div class="schedule-row" role="row"><strong>课时2</strong><span>工程模型深化与应用</span><span>线上＋线下</span><b>16学时</b><span>完成作业</span></div>
+            <div class="schedule-row" role="row"><strong>课时3</strong><span>项目实训</span><span>线下实训</span><b>24学时</b><span>实训记录齐全</span></div>
+          </div>
+          <div class="notice-strip"><i data-lucide="info"></i><span>正式学习入口在培训报名受理通过且报名订单支付成功后开放。</span></div>
+        </section>
+
+        <section class="detail-section" id="requirements">
+          <div class="section-title"><span>03</span><div><h2>完成条件</h2></div></div>
+          <ol class="condition-list">
+            <li><b>1</b><span><strong>完成规定学时</strong>累计有效学习时长达到48学时。</span></li>
+            <li><b>2</b><span><strong>完成必修内容</strong>全部必修章节学习进度达到100%。</span></li>
+            <li><b>3</b><span><strong>通过课程测验</strong>各阶段必要测验达到课程设定要求。</span></li>
+            <li><b>4</b><span><strong>机构完成确认</strong>培训机构核验过程记录并作出培训完成结论。</span></li>
+          </ol>
+        </section>
+
+        <section class="detail-section" id="materials">
+          <div class="section-title"><span>04</span><div><h2>报名材料</h2></div></div>
+          <div class="material-layout">
+            <div><h3>基本报名条件</h3><ul class="check-list"><li>具备与本工种相关的从业或学习经历</li><li>完成平台实名信息和个人报名资料</li><li>能够在规定培训周期内完成学习任务</li></ul></div>
+            <div><h3>需要准备的材料</h3><ul class="file-list"><li><i data-lucide="image"></i><span>近期证件照<small>JPG或PNG</small></span><b>必交</b></li><li><i data-lucide="id-card"></i><span>身份证明<small>正反面清晰图片</small></span><b>必交</b></li><li><i data-lucide="file-text"></i><span>学历或从业证明<small>图片或PDF</small></span><b class="conditional">按条件</b></li></ul></div>
+          </div>
+        </section>
+
+        <section class="detail-section" id="subsidy">
+          <div class="section-title"><span>05</span><div><h2>补贴说明</h2></div></div>
+          <div class="subsidy-panel">
+            <i data-lucide="badge-dollar-sign"></i>
+            <div><h3>符合条件的人员或企业可按规定申领</h3><p>补贴对象、补贴标准、申领主体及办理方式，与人员身份、培训类别、过程记录和培训结果等条件有关。平台报名缴费时仍按课程公布金额支付，不直接抵扣预计补贴。</p><span>本专区一期不办理补贴审批和资金发放，具体以培训所在地有关部门审核结果为准。</span></div>
+          </div>
+        </section>
+
+        <section class="detail-section provider-section" id="provider">
+          <div class="section-title"><span>06</span><div><h2>承训机构</h2></div></div>
+          <div class="provider-card">
+            <div class="provider-logo"><i data-lucide="landmark"></i></div>
+            <div><h3>武汉绿色建造职业培训中心（模拟）</h3><ul><li><i data-lucide="map-pin"></i>武汉市洪山区光谷大道（模拟）</li><li><i data-lucide="phone"></i>027-8888 6600（模拟）</li></ul></div>
+            <a class="provider-link-button" href="培训机构详情.html">查看机构详情<i data-lucide="chevron-right"></i></a>
+          </div>
+        </section>
+      </div>
+
+      <aside class="enroll-card" aria-label="课程报名信息">
+        <div class="enroll-card-head"><span>报名费（包含培训和考试）</span><strong><small>¥</small>1,580</strong></div>
+        <div class="enroll-progress"><span><i style="width:72%"></i></span><p><b>已有14人报名</b><em>剩余36个名额</em></p></div>
+        <dl class="enroll-meta"><div><dt>报名截止</dt><dd>2026-10-08 17:00</dd></div><div><dt>开班时间</dt><dd>2026-10-12</dd></div><div><dt>培训方式</dt><dd>线上培训</dd></div><div><dt>培训学时</dt><dd>48学时</dd></div></dl>
+        <div class="enroll-actions"><button class="button primary" type="button" data-enroll="personal"><i data-lucide="user-round"></i>个人报名</button><button class="button team" type="button" data-enroll="team"><i data-lucide="users"></i>团队报名</button></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div><strong>湖北省智能建造产业互联网平台</strong><span>培训考试专区产品原型 V0.1 · 页面数据均为模拟数据</span></div><div><a href="#" data-demo="隐私政策">隐私政策</a><a href="#" data-demo="无障碍浏览">无障碍浏览</a><a href="#" data-demo="联系我们">联系我们</a></div></footer>
+
+  <div class="toast-region" id="toast-region" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modal-backdrop" aria-hidden="true"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" type="button" aria-label="关闭"><i data-lucide="x"></i></button><div id="modal-content"></div></section></div>
+  <script src="assets/lucide.min.js"></script>
+  <script src="assets/course-detail.js"></script>
+</body>
+</html>

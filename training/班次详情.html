@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>班次详情｜培训机构运营端</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page-id="班次详情.html">
+<header class="topbar">
+<button class="mobile-menu-trigger" type="button">
+<span data-icon="menu">
+</span>
+</button>
+<a class="brand" href="机构信息.html">
+<img src="assets/platform-logo.svg" alt="湖北省智能建造产业互联网平台">
+</a>
+<div class="topbar-right">
+<button class="top-action" data-toast="当前有8项待办">
+<span data-icon="bell">
+</span>
+<span class="notice-dot">
+</span>
+</button>
+<div class="user">
+<div class="avatar">
+<span data-icon="user">
+</span>
+</div>
+<div class="user-copy">
+<strong>培训机构管理员</strong>
+<span>湖北数字建造培训中心</span>
+</div>
+<button>
+<span data-icon="chevronDown">
+</span>
+</button>
+</div>
+</div>
+</header>
+<aside class="sidebar">
+<button class="sidebar-toggle">
+<span data-icon="menu">
+</span>
+</button>
+<nav class="nav-section">
+<a class="nav-group-title " href="机构信息.html">
+<span data-icon="building">
+</span>
+<span>机构信息</span>
+</a>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="book">
+</span>
+<span>课程管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="课程管理.html">课程列表</a>
+</div>
+</div>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="file">
+</span>
+<span>报名管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="个人报名审核.html">个人报名审核</a>
+<a class="nav-link " href="团队报名审核.html">团队报名审核</a>
+<a class="nav-link " href="报名成员名单.html">报名成员名单</a>
+</div>
+</div>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="receipt">
+</span>
+<span>订单管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="报名订单.html">报名订单</a>
+</div>
+</div>
+<div class="nav-group open">
+<button class="nav-group-title active-parent" type="button">
+<span data-icon="graduation">
+</span>
+<span>培训实施</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link active" href="班次管理.html">班次管理</a>
+<a class="nav-link " href="学员档案.html">学员档案</a>
+</div>
+</div>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="shield">
+</span>
+<span>送考管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="培训完成名单.html">培训完成名单</a>
+<a class="nav-link " href="送考批次台账.html">送考批次</a>
+<a class="nav-link " href="送考审核反馈.html">送考审核反馈</a>
+<a class="nav-link " href="考试安排查询.html">考试安排查询</a>
+</div>
+</div>
+</nav>
+</aside>
+<main class="app-main">
+<div class="page-wrap">
+<section class="content-card">
+<header class="page-header">
+<div class="page-head-row">
+<div>
+<a class="back-link" href="班次管理.html">
+<span data-icon="arrowLeft">
+</span>返回班次列表</a>
+<h1 class="page-title">班次详情</h1>
+<div class="breadcrumb">
+<a href="班次管理.html">培训实施</a>
+<span class="muted">/</span>
+<span class="muted">班次详情</span>
+</div>
+</div>
+<div class="header-actions">
+<a class="btn btn-primary" href="编辑班次.html">编辑班次</a>
+</div>
+</div>
+</header>
+<div class="detail-body">
+<div class="record-banner">
+<div class="record-banner-main">
+<span class="record-symbol"><span data-icon="clipboard"></span></span>
+<div>
+<h2>建筑信息模型技术员实务班</h2>
+<p>班次编号：BC-2026-0068　·　关联课程：建筑信息模型技术员实务课程</p>
+</div>
+</div>
+<div class="record-banner-side">
+<div class="record-number">
+<span>综合报名费</span>
+<strong class="money">¥1,580/人</strong>
+<small>（培训费¥1,280＋考试费¥300）</small>
+</div>
+<span class="tag tag-green" id="class-status-tag"><span class="status-dot"></span>报名中</span>
+</div>
+</div>
+<div class="class-metrics">
+<div><span>已报名</span><strong>32人</strong></div>
+<div><span>已受理</span><strong>28人</strong></div>
+<div><span>已缴费</span><strong>26人</strong></div>
+<div><span>剩余名额</span><strong>18人</strong></div>
+</div>
+<div class="tabs detail-tabs">
+<button class="tab active" data-panel-tab="base">基本信息</button>
+<button class="tab" data-panel-tab="members">报名学员</button>
+<button class="tab" data-panel-tab="training">培训实施</button>
+</div>
+<div data-panel="base" class="detail-panel">
+<section class="plain-card">
+<div class="block-head"><h2>班次基础信息</h2></div>
+<div class="plain-card-body"><div class="detail-grid">
+<div class="detail-item"><span class="detail-label">报名时间</span><span class="detail-value">2026-08-20 至 09-25</span></div>
+<div class="detail-item"><span class="detail-label">培训时间</span><span class="detail-value">2026-10-12 至 11-08</span></div>
+<div class="detail-item"><span class="detail-label">培训方式</span><span class="detail-value">线上理论＋线下实训</span></div>
+<div class="detail-item"><span class="detail-label">招生名额</span><span class="detail-value">50人</span></div>
+<div class="detail-item wide"><span class="detail-label">培训地点</span><span class="detail-value">武汉市洪山区数字建造实训基地</span></div>
+<div class="detail-item"><span class="detail-label">班次状态</span><span class="detail-value" id="class-status-value">报名中</span></div>
+</div></div>
+</section>
+<section class="plain-card">
+<div class="block-head"><h2>评价衔接信息</h2></div>
+<div class="plain-card-body"><div class="detail-grid">
+<div class="detail-item"><span class="detail-label">评价项目</span><span class="detail-value">建筑信息模型技术员职业技能评价</span></div>
+<div class="detail-item"><span class="detail-label">评价机构</span><span class="detail-value">湖北省智能建造评价中心</span></div>
+<div class="detail-item wide"><span class="detail-label">送考方式</span><span class="detail-value">完成培训后由培训机构统一创建送考批次</span></div>
+</div></div>
+</section>
+</div>
+<div data-panel="members" class="detail-panel hidden">
+<section class="plain-card">
+<div class="block-head"><h2>报名学员</h2></div>
+<div class="plain-card-body"><div class="standard-table-shell">
+<table class="standard-table" style="min-width:980px"><thead><tr>
+<th>平台报名编号</th><th>姓名</th><th>报名方式</th><th>受理状态</th><th>缴费状态</th><th>参训状态</th><th class="sticky-op">操作</th>
+</tr></thead><tbody>
+<tr><td>HBIC-2026-000128</td><td>张明</td><td>团队报名</td><td><span class="tag tag-green">已受理</span></td><td><span class="tag tag-green">已支付</span></td><td><span class="tag tag-blue">培训中</span></td><td class="sticky-op"><a class="link" href="学员档案详情.html">查看档案</a></td></tr>
+<tr><td>HBIC-2026-000132</td><td>李莉</td><td>个人报名</td><td><span class="tag tag-green">已受理</span></td><td><span class="tag tag-green">已支付</span></td><td><span class="tag tag-blue">培训中</span></td><td class="sticky-op"><a class="link" href="学员档案详情.html">查看档案</a></td></tr>
+</tbody></table>
+</div></div>
+</section>
+</div>
+<div data-panel="training" class="detail-panel hidden">
+<section class="plain-card">
+<div class="block-head"><h2>培训概览</h2></div>
+<div class="plain-card-body"><div class="class-metrics compact">
+<div><span>班次人数</span><strong>32人</strong></div>
+<div><span>线上平均进度</span><strong>72%</strong></div>
+<div><span>线下计划课次</span><strong>4次</strong></div>
+<div><span>已完成课次</span><strong>3次</strong></div>
+</div></div>
+</section>
+<section class="plain-card">
+<div class="block-head training-result-head"><h2>学员培训进度</h2><button class="btn btn-primary" id="batch-training-result" type="button" hidden>批量确认培训结果</button></div>
+<div class="training-result-bar" id="training-result-summary">
+<div class="training-result-stat"><span>待确认</span><strong data-result-count="pending">1人</strong></div>
+<div class="training-result-stat"><span>培训完成</span><strong data-result-count="complete">1人</strong></div>
+<div class="training-result-stat"><span>培训未完成</span><strong data-result-count="incomplete">1人</strong></div>
+</div>
+<div class="plain-card-body"><div class="standard-table-shell">
+<table class="standard-table" style="min-width:1180px"><thead><tr>
+<th class="select-cell"><input type="checkbox" data-training-select-all aria-label="全选待确认学员"></th><th>平台报名编号</th><th>姓名</th><th>线上学时</th><th>线下出勤</th><th>实训记录</th><th>当前进度</th><th>完成状态</th><th class="sticky-op">操作</th>
+</tr></thead><tbody>
+<tr data-training-row data-student-name="张明" data-result-status="pending" data-confirm-user="" data-confirm-time="" data-confirm-note=""><td class="select-cell"><input type="checkbox" data-training-select aria-label="选择张明"></td><td>HBIC-2026-000128</td><td>张明</td><td>32 / 40</td><td>3 / 4</td><td>2项</td><td>76%</td><td data-training-status><span class="tag tag-orange">待确认</span></td><td class="sticky-op" data-training-actions><button class="link" type="button" data-training-action="confirm">确认培训结果</button></td></tr>
+<tr data-training-row data-student-name="李莉" data-result-status="complete" data-confirm-user="王老师" data-confirm-time="2026-11-08 18:30" data-confirm-note="线上与线下培训记录均达到课程完成要求。"><td class="select-cell"><input type="checkbox" disabled aria-label="李莉已确认"></td><td>HBIC-2026-000132</td><td>李莉</td><td>40 / 40</td><td>4 / 4</td><td>3项</td><td>100%</td><td data-training-status><span class="tag tag-green">培训完成</span></td><td class="sticky-op" data-training-actions><button class="link" type="button" data-training-action="view">查看确认信息</button></td></tr>
+<tr data-training-row data-student-name="陈浩" data-result-status="incomplete" data-confirm-user="王老师" data-confirm-time="2026-11-08 18:35" data-confirm-note="线上有效学时和线下出勤均未达到课程完成要求。"><td class="select-cell"><input type="checkbox" disabled aria-label="陈浩已确认"></td><td>HBIC-2026-000136</td><td>陈浩</td><td>24 / 40</td><td>2 / 4</td><td>1项</td><td>58%</td><td data-training-status><span class="tag tag-red">培训未完成</span></td><td class="sticky-op" data-training-actions><span class="training-inline-actions"><button class="link" type="button" data-training-action="view">查看结果</button><button class="link" type="button" data-training-action="reconfirm">重新确认</button></span></td></tr>
+</tbody></table>
+</div></div>
+</section>
+<section class="plain-card">
+<div class="block-head"><h2>线下培训过程</h2></div>
+<div class="plain-card-body"><div class="standard-table-shell">
+<table class="standard-table" style="min-width:1050px"><thead><tr>
+<th>课次</th><th>培训日期</th><th>培训内容</th><th>形式</th><th>应到</th><th>实到</th><th>记录状态</th><th class="sticky-op">操作</th>
+</tr></thead><tbody>
+<tr><td>第1次</td><td>2026-10-18</td><td>BIM建模基础实训</td><td>线下实训</td><td>32人</td><td>31人</td><td><span class="tag tag-green">已记录</span></td><td class="sticky-op"><a class="link" href="线下培训过程录入.html">查看/编辑</a></td></tr>
+<tr><td>第2次</td><td>2026-10-25</td><td>工程模型深化实训</td><td>线下实训</td><td>32人</td><td>32人</td><td><span class="tag tag-green">已记录</span></td><td class="sticky-op"><a class="link" href="线下培训过程录入.html#second">查看/编辑</a></td></tr>
+<tr><td>第4次</td><td>2026-11-08</td><td>项目综合实训</td><td>线下实训</td><td>32人</td><td>—</td><td><span class="tag tag-gray">待记录</span></td><td class="sticky-op"><a class="link" href="线下培训过程录入.html#new">录入</a></td></tr>
+</tbody></table>
+</div></div>
+</section>
+</div>
+</div>
+</section>
+</div>
+</main>
+<div class="modal-mask" id="training-result-modal" aria-hidden="true">
+<section class="modal training-result-modal" role="dialog" aria-modal="true" aria-labelledby="training-result-title">
+<div class="modal-head"><h2 id="training-result-title">确认培训结果</h2><button class="icon-button" type="button" data-training-close aria-label="关闭">×</button></div>
+<div class="modal-body">
+<form id="training-result-form">
+<div class="form-item"><label>确认学员</label><div class="form-value"><strong id="training-selected-count">已选择1人</strong></div></div>
+<div class="form-item"><label>培训结果</label><div class="training-choice-grid"><button class="training-choice selected" type="button" data-training-choice="complete"><strong>培训完成</strong></button><button class="training-choice" type="button" data-training-choice="incomplete"><strong>培训未完成</strong></button></div></div>
+<div class="form-item"><label for="training-confirm-time">确认时间</label><div class="form-value"><input class="control" id="training-confirm-time" type="datetime-local" value="2026-11-08T18:30"></div></div>
+<div class="form-item"><label for="training-confirm-note">确认意见</label><div class="form-value"><textarea class="control" id="training-confirm-note" rows="4" placeholder="填写培训结果确认意见"></textarea></div></div>
+<div class="form-error" id="training-result-error"></div>
+</form>
+<div class="training-result-view-grid hidden" id="training-result-view">
+<div><span>学员</span><strong data-view-name>—</strong></div><div><span>培训结果</span><strong data-view-result>—</strong></div><div><span>确认人</span><strong data-view-user>—</strong></div><div><span>确认时间</span><strong data-view-time>—</strong></div><div class="wide"><span>确认意见</span><strong data-view-note>—</strong></div>
+</div>
+</div>
+<div class="modal-foot"><button class="btn" type="button" data-training-close>取消</button><button class="btn btn-primary" type="button" id="save-training-result">保存</button></div>
+</section>
+</div>
+<div class="toast-stack">
+</div><script src="assets/app.js"></script></body></html>

@@ -1,0 +1,55 @@
+{
+  "source": "V2功能清单/评价机构运营端（按确认剥离6个模块）",
+  "retained_function_count": 18,
+  "prototype_page_count": 23,
+  "business_rules": [
+    "不设置在线考试与在线评分模块",
+    "考试端手工录入理论成绩和实操成绩",
+    "理论、实操均合格时考试通过",
+    "证书须第三方赋码成功后生成"
+  ],
+  "coverage": {
+    "机构信息维护": [
+      "org-info.html",
+      "org-info-edit.html"
+    ],
+    "考试项目管理": [
+      "project-list.html",
+      "project-detail.html",
+      "project-edit.html"
+    ],
+    "送考管理": [
+      "send-batch-list.html",
+      "send-batch-detail.html"
+    ],
+    "考生名单": [
+      "candidate-list.html",
+      "candidate-detail.html"
+    ],
+    "考试批次与任务下发": [
+      "exam-batch-list.html",
+      "exam-batch-detail.html",
+      "exam-batch-edit.html"
+    ],
+    "准考证管理": [
+      "admission-list.html",
+      "admission-detail.html"
+    ],
+    "成绩管理": [
+      "result-list.html",
+      "result-detail.html"
+    ],
+    "成绩发布": [
+      "score-publish-list.html",
+      "score-publish-detail.html"
+    ],
+    "合格考生": [
+      "qualified-list.html",
+      "qualified-detail.html"
+    ],
+    "证书发放": [
+      "certificate-issue-list.html",
+      "certificate-issue-detail.html"
+    ]
+  }
+}

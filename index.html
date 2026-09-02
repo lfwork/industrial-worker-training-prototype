@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="产业工人培训考试取证平台四端原型集合页">
+  <title>产业工人培训考试取证平台｜原型集合</title>
+  <style>
+    :root {
+      --primary: #2878f0;
+      --navy: #17365f;
+      --text: #1e2f4d;
+      --muted: #69809f;
+      --line: #dfe9f7;
+      --surface: #ffffff;
+      --page: #f4f8fe;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--text);
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      background: linear-gradient(180deg, #e9f2ff 0, var(--page) 370px);
+    }
+    .shell { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
+    header { padding: 68px 0 36px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 14px;
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+    .eyebrow::before { width: 28px; height: 3px; content: ""; background: var(--primary); border-radius: 99px; }
+    h1 { margin: 0; color: var(--navy); font-size: clamp(30px, 5vw, 44px); line-height: 1.25; letter-spacing: .02em; }
+    .intro { max-width: 680px; margin: 16px 0 0; color: var(--muted); font-size: 16px; line-height: 1.8; }
+    .summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 22px;
+      margin-bottom: 24px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,.76);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .summary strong { color: var(--text); }
+    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; padding-bottom: 52px; }
+    .card {
+      position: relative;
+      display: flex;
+      min-height: 230px;
+      flex-direction: column;
+      padding: 28px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface);
+      box-shadow: 0 12px 30px rgba(34, 76, 135, .07);
+    }
+    .card::after {
+      position: absolute;
+      right: -30px;
+      bottom: -54px;
+      width: 150px;
+      height: 150px;
+      content: "";
+      border-radius: 50%;
+      background: var(--tint);
+      opacity: .8;
+    }
+    .card-top { display: flex; align-items: center; gap: 14px; }
+    .icon {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      flex: none;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--tint);
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 700;
+    }
+    h2 { margin: 0; font-size: 20px; line-height: 1.4; }
+    .role { margin: 3px 0 0; color: var(--muted); font-size: 13px; }
+    .description { margin: 23px 0 24px; color: #536b8d; font-size: 14px; line-height: 1.75; }
+    .open {
+      z-index: 1;
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      margin-top: auto;
+      border-radius: 7px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .open:hover { transform: translateY(-2px); box-shadow: 0 8px 16px color-mix(in srgb, var(--accent) 28%, transparent); }
+    .open:focus-visible { outline: 3px solid #89bbff; outline-offset: 3px; }
+    .pc { --accent: #2878f0; --tint: #e8f1ff; }
+    .platform { --accent: #1a968b; --tint: #e3f7f4; }
+    .training { --accent: #6b61d8; --tint: #efedff; }
+    .evaluation { --accent: #e37b35; --tint: #fff0e6; }
+    footer { padding: 20px 0 34px; border-top: 1px solid var(--line); color: #8092ac; font-size: 13px; }
+    @media (max-width: 720px) {
+      .shell { width: min(100% - 32px, 1160px); }
+      header { padding-top: 44px; }
+      .summary { align-items: flex-start; flex-direction: column; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">PROTOTYPE COLLECTION</p>
+      <h1>产业工人培训考试取证平台</h1>
+      <p class="intro">一期业务原型集合。请选择应用端进入其菜单栏首个页面，体验对应角色的业务页面与交互。</p>
+    </header>
+
+    <section class="summary" aria-label="原型说明">
+      <span><strong>访问说明：</strong>四端原型均为静态演示数据，仅用于业务方案交流与原型评审。</span>
+      <span>一期业务链路：报名 → 缴费 → 培训 → 送考 → 考试 → 成绩 → 证书</span>
+    </section>
+
+    <section class="cards" aria-label="应用端入口">
+      <article class="card pc">
+        <div class="card-top"><span class="icon">01</span><div><h2>培训考试专区 PC 端</h2><p class="role">学员 / 团队负责人</p></div></div>
+        <p class="description">面向产业工人开展课程浏览、报名缴费、培训学习、考试查询及证书查验等业务。</p>
+        <a class="open" href="pc/首页.html">进入专区首页 <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="card platform">
+        <div class="card-top"><span class="icon">02</span><div><h2>平台运营管理端</h2><p class="role">平台运营管理员</p></div></div>
+        <p class="description">面向平台运营人员开展专区内容、机构、报名、送考进度及业务档案的运营管理。</p>
+        <a class="open" href="platform/工作台.html">进入工作台 <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="card training">
+        <div class="card-top"><span class="icon">03</span><div><h2>培训机构管理端</h2><p class="role">培训机构管理员</p></div></div>
+        <p class="description">面向培训机构开展课程班次、报名受理、培训实施、送考提交及考试安排查询。</p>
+        <a class="open" href="training/机构信息.html">进入机构信息 <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="card evaluation">
+        <div class="card-top"><span class="icon">04</span><div><h2>评价机构管理端</h2><p class="role">评价机构管理员</p></div></div>
+        <p class="description">面向评价机构开展考试项目、送考审核、考务执行、成绩发布和证书发放等业务。</p>
+        <a class="open" href="evaluation/机构信息.html">进入机构信息 <span aria-hidden="true">→</span></a>
+      </article>
+    </section>
+
+    <footer>产业工人培训考试取证平台 · HTML 原型演示</footer>
+  </main>
+</body>
+</html>

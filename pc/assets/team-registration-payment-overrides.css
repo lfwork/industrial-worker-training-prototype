@@ -1,0 +1,1 @@
+[data-offline-fields]:not([hidden]){display:block!important}.payment-total [hidden]{display:none!important}#modal-backdrop .modal:has(.payment-result-simple){background:#fff}

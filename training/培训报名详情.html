@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>报名详情｜培训机构运营端</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page-id="培训报名详情.html">
+<header class="topbar">
+<button class="mobile-menu-trigger" type="button">
+<span data-icon="menu">
+</span>
+</button>
+<a class="brand" href="机构信息.html">
+<img src="assets/platform-logo.svg" alt="湖北省智能建造产业互联网平台">
+</a>
+<div class="topbar-right">
+<button class="top-action" data-toast="当前有8项待办">
+<span data-icon="bell">
+</span>
+<span class="notice-dot">
+</span>
+</button>
+<div class="user">
+<div class="avatar">
+<span data-icon="user">
+</span>
+</div>
+<div class="user-copy">
+<strong>培训机构管理员</strong>
+<span>湖北数字建造培训中心</span>
+</div>
+<button>
+<span data-icon="chevronDown">
+</span>
+</button>
+</div>
+</div>
+</header>
+<aside class="sidebar">
+<button class="sidebar-toggle">
+<span data-icon="menu">
+</span>
+</button>
+<nav class="nav-section">
+<a class="nav-group-title " href="机构信息.html">
+<span data-icon="building">
+</span>
+<span>机构信息</span>
+</a>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="book">
+</span>
+<span>课程管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="课程管理.html">课程列表</a>
+</div>
+</div>
+<div class="nav-group open">
+<button class="nav-group-title active-parent" type="button">
+<span data-icon="file">
+</span>
+<span>报名管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link active" href="个人报名审核.html">个人报名审核</a>
+<a class="nav-link " href="团队报名审核.html">团队报名审核</a>
+<a class="nav-link " href="报名成员名单.html">报名成员名单</a>
+</div>
+</div>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="receipt">
+</span>
+<span>订单管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="报名订单.html">报名订单</a>
+</div>
+</div>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="graduation">
+</span>
+<span>培训实施</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="班次管理.html">班次管理</a>
+<a class="nav-link " href="学员档案.html">学员档案</a>
+</div>
+</div>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="shield">
+</span>
+<span>送考管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="培训完成名单.html">培训完成名单</a>
+<a class="nav-link " href="送考批次台账.html">送考批次</a>
+<a class="nav-link " href="送考审核反馈.html">送考审核反馈</a>
+<a class="nav-link " href="考试安排查询.html">考试安排查询</a>
+</div>
+</div>
+</nav>
+</aside>
+<main class="app-main">
+<div class="page-wrap">
+<section class="content-card">
+<header class="page-header">
+<div class="page-head-row">
+<div>
+<a class="back-link" id="registration-back" href="个人报名审核.html"><span data-icon="arrowLeft"></span>返回个人报名审核</a>
+<h1 class="page-title" id="registration-page-title">个人报名审核详情</h1>
+<div class="breadcrumb">
+<a href="机构信息.html">机构信息</a><span class="muted">/</span>
+<a id="registration-breadcrumb-link" href="个人报名审核.html">个人报名审核</a><span class="muted">/</span>
+<span class="muted">报名详情</span>
+</div>
+</div>
+<div class="header-actions">
+<button class="btn btn-primary" id="registration-review-trigger" type="button">报名受理</button>
+</div>
+</div>
+</header>
+<div class="detail-body">
+<div class="record-banner">
+<div class="record-banner-main">
+<span class="record-symbol"><span data-icon="file"></span></span>
+<div>
+<h2 id="registration-banner-title">张明 · 建筑信息模型技术员实务班</h2>
+<p id="registration-summary">平台报名编号：HBIC-2026-000128　·　报名方式：个人报名</p>
+</div>
+</div>
+<div class="record-banner-side">
+<span class="tag tag-orange" id="registration-status-tag"><span class="status-dot"></span><span id="registration-status-text">待审核</span></span>
+</div>
+</div>
+<div class="main-stack">
+<section class="plain-card">
+<div class="block-head"><h2>报名信息</h2></div>
+<div class="plain-card-body">
+<div class="detail-grid">
+<div class="detail-item personal-only"><span class="detail-label">姓名</span><span class="detail-value">张明</span></div>
+<div class="detail-item personal-only"><span class="detail-label">证件号码</span><span class="detail-value">420106********2412</span></div>
+<div class="detail-item personal-only"><span class="detail-label">联系电话</span><span class="detail-value">138****6726</span></div>
+<div class="detail-item personal-only"><span class="detail-label">报名课程</span><span class="detail-value">建筑信息模型技术员实务班</span></div>
+<div class="detail-item personal-only"><span class="detail-label">报名方式</span><span class="detail-value">个人报名</span></div>
+<div class="detail-item personal-only"><span class="detail-label">课程费用</span><span class="detail-value">1580元（培训费1280元＋考试费300元）</span></div>
+<div class="detail-item team-only hidden"><span class="detail-label">团队负责人</span><span class="detail-value">周工</span></div>
+<div class="detail-item team-only hidden"><span class="detail-label">团队负责人联系电话</span><span class="detail-value">139****5816</span></div>
+<div class="detail-item team-only hidden"><span class="detail-label">报名课程</span><span class="detail-value">建筑信息模型技术员实务班</span></div>
+<div class="detail-item team-only hidden"><span class="detail-label">报名方式</span><span class="detail-value">团队报名</span></div>
+<div class="detail-item team-only hidden"><span class="detail-label">单人课程费用</span><span class="detail-value">1580元（培训费1280元＋考试费300元）</span></div>
+<div class="detail-item team-only hidden"><span class="detail-label">总费用</span><span class="detail-value">47,400元（培训费38,400元＋考试费9,000元，共30人）</span></div>
+</div>
+</div>
+</section>
+<section class="plain-card personal-only">
+<div class="block-head"><h2>报名材料</h2></div>
+<div class="plain-card-body">
+<div class="standard-table-shell">
+<table class="standard-table" style="min-width:760px">
+<thead><tr><th>材料名称</th><th>材料内容</th></tr></thead>
+<tbody>
+<tr><td>身份证正反面</td><td>身份证正面.jpg　身份证反面.jpg　<a class="link" href="#" data-toast="正在预览身份证材料">预览</a></td></tr>
+<tr><td>学历/工作证明</td><td>建筑行业工作证明.pdf　<a class="link" href="#" data-toast="正在预览工作证明">预览</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="plain-card team-only hidden" id="team-member-section">
+<div class="block-head">
+<h2>报名成员列表</h2>
+<div style="display:flex;align-items:center;gap:12px"><span class="muted">共10人</span><button class="btn btn-primary" id="team-batch-review-trigger" type="button">批量报名受理（8）</button></div>
+</div>
+<div class="plain-card-body">
+<div class="standard-table-shell">
+<table class="standard-table" style="min-width:980px;table-layout:fixed">
+<thead><tr><th style="width:44px"><input type="checkbox" id="team-select-all" checked aria-label="全选待审核成员"></th><th style="width:150px">平台报名编号</th><th style="width:76px">姓名</th><th style="width:180px">证件号码</th><th style="width:120px">联系电话</th><th style="width:220px">报名材料</th><th style="width:100px">审核状态</th><th class="sticky-op" style="width:78px">操作</th></tr></thead>
+<tbody>
+<tr data-team-member-row data-status="pending"><td><input type="checkbox" data-team-select checked aria-label="选择张明"></td><td>HBIC-2026-000128</td><td>张明</td><td>420106********2412</td><td>138****6726</td><td>身份证、工作证明　<a class="link" href="#" data-toast="正在查看张明的报名材料">查看材料</a></td><td data-member-status><span class="tag tag-orange"><span class="status-dot"></span>待审核</span></td><td class="sticky-op" data-member-action><button class="link" type="button" data-team-audit>审核</button></td></tr>
+<tr data-team-member-row data-status="pending"><td><input type="checkbox" data-team-select checked aria-label="选择李建国"></td><td>HBIC-2026-000129</td><td>李建国</td><td>420106********1187</td><td>137****3085</td><td>身份证、工作证明　<a class="link" href="#" data-toast="正在查看李建国的报名材料">查看材料</a></td><td data-member-status><span class="tag tag-orange"><span class="status-dot"></span>待审核</span></td><td class="sticky-op" data-member-action><button class="link" type="button" data-team-audit>审核</button></td></tr>
+<tr data-team-member-row data-status="pending"><td><input type="checkbox" data-team-select checked aria-label="选择周志强"></td><td>HBIC-2026-000130</td><td>周志强</td><td>420106********0038</td><td>136****7291</td><td>身份证、工作证明　<a class="link" href="#" data-toast="正在查看周志强的报名材料">查看材料</a></td><td data-member-status><span class="tag tag-orange"><span class="status-dot"></span>待审核</span></td><td class="sticky-op" data-member-action><button class="link" type="button" data-team-audit>审核</button></td></tr>
+<tr data-team-member-row data-status="pending"><td><input type="checkbox" data-team-select checked aria-label="选择陈浩"></td><td>HBIC-2026-000131</td><td>陈浩</td><td>420106********6613</td><td>139****2180</td><td>身份证、工作证明　<a class="link" href="#" data-toast="正在查看陈浩的报名材料">查看材料</a></td><td data-member-status><span class="tag tag-orange"><span class="status-dot"></span>待审核</span></td><td class="sticky-op" data-member-action><button class="link" type="button" data-team-audit>审核</button></td></tr>
+<tr data-team-member-row data-status="pending"><td><input type="checkbox" data-team-select checked aria-label="选择王磊"></td><td>HBIC-2026-000132</td><td>王磊</td><td>420106********2046</td><td>135****4482</td><td>身份证、工作证明　<a class="link" href="#" data-toast="正在查看王磊的报名材料">查看材料</a></td><td data-member-status><span class="tag tag-orange"><span class="status-dot"></span>待审核</span></td><td class="sticky-op" data-member-action><button class="link" type="button" data-team-audit>审核</button></td></tr>
+<tr data-team-member-row data-status="pending"><td><input type="checkbox" data-team-select checked aria-label="选择刘洋"></td><td>HBIC-2026-000133</td><td>刘洋</td><td>420106********5829</td><td>134****9166</td><td>身份证、工作证明　<a class="link" href="#" data-toast="正在查看刘洋的报名材料">查看材料</a></td><td data-member-status><span class="tag tag-orange"><span class="status-dot"></span>待审核</span></td><td class="sticky-op" data-member-action><button class="link" type="button" data-team-audit>审核</button></td></tr>
+<tr data-team-member-row data-status="pending"><td><input type="checkbox" data-team-select checked aria-label="选择赵凯"></td><td>HBIC-2026-000134</td><td>赵凯</td><td>420106********1394</td><td>133****5077</td><td>身份证、工作证明　<a class="link" href="#" data-toast="正在查看赵凯的报名材料">查看材料</a></td><td data-member-status><span class="tag tag-orange"><span class="status-dot"></span>待审核</span></td><td class="sticky-op" data-member-action><button class="link" type="button" data-team-audit>审核</button></td></tr>
+<tr data-team-member-row data-status="pending"><td><input type="checkbox" data-team-select checked aria-label="选择胡敏"></td><td>HBIC-2026-000135</td><td>胡敏</td><td>420106********7718</td><td>132****8431</td><td>身份证、工作证明　<a class="link" href="#" data-toast="正在查看胡敏的报名材料">查看材料</a></td><td data-member-status><span class="tag tag-orange"><span class="status-dot"></span>待审核</span></td><td class="sticky-op" data-member-action><button class="link" type="button" data-team-audit>审核</button></td></tr>
+<tr data-team-member-row data-status="accepted"><td><input type="checkbox" disabled aria-label="李娜已受理"></td><td>HBIC-2026-000136</td><td>李娜</td><td>420106********3265</td><td>131****6294</td><td>身份证、工作证明　<a class="link" href="#" data-toast="正在查看李娜的报名材料">查看材料</a></td><td data-member-status><span class="tag tag-green"><span class="status-dot"></span>已受理</span></td><td class="sticky-op" data-member-action><span class="muted">—</span></td></tr>
+<tr data-team-member-row data-status="rejected"><td><input type="checkbox" disabled aria-label="孙杰已退回"></td><td>HBIC-2026-000137</td><td>孙杰</td><td>420106********9082</td><td>130****1743</td><td>身份证、工作证明　<a class="link" href="#" data-toast="正在查看孙杰的报名材料">查看材料</a></td><td data-member-status><span class="tag tag-orange"><span class="status-dot"></span>已退回</span></td><td class="sticky-op" data-member-action><span class="muted">—</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="plain-card hidden" id="review-detail-section">
+<div class="block-head"><h2>审核信息</h2></div>
+<div class="plain-card-body">
+<div class="detail-grid">
+<div class="detail-item"><span class="detail-label">审核人</span><span class="detail-value" id="review-operator">陈老师</span></div>
+<div class="detail-item"><span class="detail-label">审核结果</span><span class="detail-value" id="review-result">受理通过</span></div>
+<div class="detail-item"><span class="detail-label">审核时间</span><span class="detail-value" id="review-time">2026-08-20 10:05</span></div>
+<div class="detail-item wide"><span class="detail-label">审核意见</span><span class="detail-value" id="review-opinion-value">资料齐全，符合课程报名要求。</span></div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</section>
+</div>
+</main>
+<div class="modal-mask" id="registration-review-modal" aria-hidden="true">
+<section class="modal" role="dialog" aria-modal="true" aria-labelledby="registration-review-title">
+<div class="modal-head"><h2 id="registration-review-title">报名受理</h2><button class="icon-btn" type="button" data-close-registration-modal aria-label="关闭">×</button></div>
+<div class="modal-body">
+<p class="alert alert-info" id="review-selection-summary">报名人员：张明</p>
+<label class="field"><span>受理结果</span></label>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0 18px">
+<label class="choice-card selected" data-registration-choice="accepted"><input type="radio" name="registration-result" value="accepted" checked>受理通过</label>
+<label class="choice-card" data-registration-choice="rejected"><input type="radio" name="registration-result" value="rejected">审核退回</label>
+</div>
+<label class="field"><span>受理意见</span><textarea class="control" id="registration-review-opinion" rows="4" placeholder="请输入受理意见">资料齐全，符合课程报名要求。</textarea></label>
+<p class="error" id="registration-review-error"></p>
+</div>
+<div class="modal-foot"><button class="btn" type="button" data-close-registration-modal>取消</button><button class="btn btn-primary" id="registration-review-submit" type="button">提交</button></div>
+</section>
+</div>
+<div class="toast-stack"></div>
+<script src="assets/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const params = new URLSearchParams(location.search);
+  const source = params.get('source') === 'team' ? 'team' : (params.get('source') === 'members' ? 'members' : 'personal');
+  const status = ['accepted', 'rejected'].includes(params.get('status')) ? params.get('status') : 'pending';
+  const isTeam = source === 'team';
+  const navName = isTeam ? '团队报名审核' : (source === 'members' ? '报名成员名单' : '个人报名审核');
+  const listPage = isTeam ? '团队报名审核.html' : (source === 'members' ? '报名成员名单.html' : '个人报名审核.html');
+  document.querySelectorAll('.nav-link').forEach(function (link) { link.classList.toggle('active', link.textContent.trim() === navName); });
+  document.getElementById('registration-back').href = listPage;
+  document.getElementById('registration-back').lastChild.textContent = '返回' + navName;
+  document.getElementById('registration-breadcrumb-link').href = listPage;
+  document.getElementById('registration-breadcrumb-link').textContent = navName;
+  document.getElementById('registration-page-title').textContent = navName + '详情';
+  if (isTeam) {
+    document.querySelectorAll('.personal-only').forEach(function (item) { item.classList.add('hidden'); });
+    document.querySelectorAll('.team-only').forEach(function (item) { item.classList.remove('hidden'); });
+    document.getElementById('registration-banner-title').textContent = '周工 · 建筑信息模型技术员实务班';
+    document.getElementById('registration-summary').textContent = '报名方式：团队报名　·　报名人数：30人';
+  }
+  const personalReviewTrigger = document.getElementById('registration-review-trigger');
+  const batchReviewTrigger = document.getElementById('team-batch-review-trigger');
+  const selectAll = document.getElementById('team-select-all');
+  const memberRows = Array.from(document.querySelectorAll('[data-team-member-row]'));
+  let reviewContextRows = [];
+  let reviewMode = 'personal';
+  const states = {
+    pending: { text: '待审核', cls: 'tag-orange', result: '', opinion: '' },
+    accepted: { text: '已受理', cls: 'tag-green', result: '受理通过', opinion: '资料齐全，符合课程报名要求。' },
+    rejected: { text: '已退回', cls: 'tag-orange', result: '审核退回', opinion: '工作证明有效期信息不完整，请补充后重新提交。' }
+  };
+  function renderState(nextStatus, opinion) {
+    const state = states[nextStatus];
+    const tag = document.getElementById('registration-status-tag');
+    tag.className = 'tag ' + state.cls;
+    document.getElementById('registration-status-text').textContent = state.text;
+    personalReviewTrigger.classList.toggle('hidden', isTeam || source === 'members' || nextStatus !== 'pending');
+    if (batchReviewTrigger) batchReviewTrigger.classList.toggle('hidden', !isTeam || nextStatus !== 'pending');
+    document.getElementById('review-detail-section').classList.toggle('hidden', nextStatus === 'pending');
+    if (nextStatus !== 'pending') {
+      document.getElementById('review-result').textContent = state.result;
+      document.getElementById('review-opinion-value').textContent = opinion || state.opinion;
+    }
+  }
+  function setMemberStatus(row, nextStatus) {
+    const state = states[nextStatus];
+    row.dataset.status = nextStatus;
+    row.querySelector('[data-member-status]').innerHTML = '<span class="tag ' + state.cls + '"><span class="status-dot"></span>' + state.text + '</span>';
+    row.querySelector('[data-member-action]').innerHTML = '<span class="muted">—</span>';
+    const checkbox = row.querySelector('[data-team-select]');
+    if (checkbox) { checkbox.checked = false; checkbox.disabled = true; }
+  }
+  if (isTeam && status !== 'pending') {
+    memberRows.forEach(function (row) { setMemberStatus(row, status); });
+  }
+  renderState(status);
+  const modal = document.getElementById('registration-review-modal');
+  function toggleModal(open) { modal.classList.toggle('open', open); modal.setAttribute('aria-hidden', String(!open)); }
+  function showToast(message) {
+    const stack = document.querySelector('.toast-stack');
+    const item = document.createElement('div');
+    item.className = 'toast success'; item.textContent = message; stack.appendChild(item);
+    setTimeout(function () { item.remove(); }, 2600);
+  }
+  function resetReviewChoice() {
+    document.querySelectorAll('[data-registration-choice]').forEach(function (card) { card.classList.toggle('selected', card.dataset.registrationChoice === 'accepted'); card.querySelector('input').checked = card.dataset.registrationChoice === 'accepted'; });
+    document.getElementById('registration-review-opinion').value = '资料齐全，符合课程报名要求。';
+    document.getElementById('registration-review-error').textContent = '';
+  }
+  function openReview(rows, mode) {
+    reviewContextRows = rows; reviewMode = mode; resetReviewChoice();
+    document.getElementById('registration-review-title').textContent = mode === 'batch' ? '批量报名受理' : '报名受理';
+    document.getElementById('review-selection-summary').textContent = isTeam ? '已选择' + rows.length + '人' : '报名人员：张明';
+    toggleModal(true);
+  }
+  personalReviewTrigger.addEventListener('click', function () { openReview([], 'personal'); });
+  document.querySelectorAll('[data-close-registration-modal]').forEach(function (button) { button.addEventListener('click', function () { toggleModal(false); }); });
+  document.querySelectorAll('[data-registration-choice]').forEach(function (card) {
+    card.addEventListener('click', function () {
+      document.querySelectorAll('[data-registration-choice]').forEach(function (item) { item.classList.remove('selected'); });
+      card.classList.add('selected'); card.querySelector('input').checked = true;
+      document.getElementById('registration-review-opinion').value = card.dataset.registrationChoice === 'accepted' ? '资料齐全，符合课程报名要求。' : '';
+    });
+  });
+  function selectedRows() { return memberRows.filter(function (row) { const checkbox = row.querySelector('[data-team-select]'); return checkbox && checkbox.checked && !checkbox.disabled; }); }
+  function updateBatchSelection() {
+    if (!batchReviewTrigger) return;
+    const count = selectedRows().length;
+    batchReviewTrigger.textContent = '批量报名受理（' + count + '）';
+    batchReviewTrigger.disabled = count === 0;
+    if (selectAll) {
+      const available = memberRows.filter(function (row) { return row.dataset.status === 'pending'; });
+      selectAll.checked = available.length > 0 && available.every(function (row) { return row.querySelector('[data-team-select]').checked; });
+      selectAll.indeterminate = count > 0 && !selectAll.checked;
+    }
+  }
+  selectAll?.addEventListener('change', function () {
+    memberRows.forEach(function (row) { const checkbox = row.querySelector('[data-team-select]'); if (checkbox && !checkbox.disabled) checkbox.checked = selectAll.checked; });
+    updateBatchSelection();
+  });
+  document.querySelectorAll('[data-team-select]').forEach(function (checkbox) { checkbox.addEventListener('change', updateBatchSelection); });
+  batchReviewTrigger?.addEventListener('click', function () {
+    const rows = selectedRows();
+    if (!rows.length) { showToast('请先选择待审核成员'); return; }
+    openReview(rows, 'batch');
+  });
+  document.querySelectorAll('[data-team-audit]').forEach(function (button) {
+    button.addEventListener('click', function () { openReview([button.closest('[data-team-member-row]')], 'single'); });
+  });
+  updateBatchSelection();
+  document.getElementById('registration-review-submit').addEventListener('click', function () {
+    const choice = document.querySelector('input[name="registration-result"]:checked').value;
+    const opinion = document.getElementById('registration-review-opinion').value.trim();
+    if (!opinion) { document.getElementById('registration-review-error').textContent = '请填写受理意见。'; return; }
+    document.getElementById('registration-review-error').textContent = '';
+    if (!isTeam) {
+      renderState(choice, opinion);
+    } else {
+      reviewContextRows.forEach(function (row) { setMemberStatus(row, choice); });
+      updateBatchSelection();
+      const pendingCount = memberRows.filter(function (row) { return row.dataset.status === 'pending'; }).length;
+      if (pendingCount === 0) {
+        const tag = document.getElementById('registration-status-tag');
+        tag.className = 'tag tag-green'; document.getElementById('registration-status-text').textContent = '审核完成';
+        batchReviewTrigger.classList.add('hidden');
+        document.getElementById('review-detail-section').classList.remove('hidden');
+        document.getElementById('review-result').textContent = (choice === 'accepted' ? '批量受理通过' : '批量审核退回') + '（' + reviewContextRows.length + '人）';
+        document.getElementById('review-opinion-value').textContent = opinion;
+      }
+    }
+    toggleModal(false);
+    showToast(reviewMode === 'batch' ? '批量报名受理结果已提交' : '报名受理结果已提交');
+  });
+});
+</script>
+</body>
+</html>

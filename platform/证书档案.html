@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>证书档案</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/business-archives.css">
+</head>
+<body class="archive-page" data-active-archive="certificate" data-archive-list="certificate">
+  <main class="app-main">
+    <div class="page-wrap">
+      <section class="content-card">
+        <header class="page-header">
+          <div class="page-head-row"><div><h1>证书档案</h1><div class="breadcrumb">工作台 / 业务档案 / 证书档案</div></div></div>
+        </header>
+        <div class="archive-filter">
+          <div class="archive-filter-grid">
+            <label><span>关键词</span><input class="control" data-archive-filter data-field="keyword" placeholder="档案编号 / 姓名 / 证书名称"></label>
+            <label><span>证书编号</span><input class="control" data-archive-filter data-field="certificate" placeholder="请输入证书编号"></label>
+            <label><span>工种</span><select class="control" data-archive-filter data-field="job"><option value="">全部</option><option>建筑信息模型技术员</option><option>装配式建筑施工员</option></select></label>
+            <label><span>技能等级</span><select class="control" data-archive-filter data-field="level"><option value="">全部</option><option>—</option></select></label>
+            <label><span>发证机构</span><select class="control" data-archive-filter data-field="org"><option value="">全部</option><option>湖北省智能建造评价中心</option></select></label>
+            <label><span>发证月份</span><select class="control" data-archive-filter data-field="time"><option value="">全部</option><option value="2026-06">2026年6月</option><option value="2026-07">2026年7月</option></select></label>
+            <label><span>证书状态</span><select class="control" data-archive-filter data-field="status"><option value="">全部</option><option>有效</option></select></label>
+          </div>
+          <div class="archive-filter-actions"><button class="btn btn-primary" data-archive-search>搜索</button><button class="btn" data-archive-reset>重置</button></div>
+        </div>
+        <div class="archive-list-meta"><strong>证书档案列表</strong><span>共 <b data-visible-count>2</b> 条</span></div>
+        <div class="archive-table-wrap"><div class="standard-table-shell"><table class="standard-table archive-table">
+          <thead><tr><th>证书档案编号</th><th>证书编号</th><th>持证人</th><th>证书名称</th><th>工种</th><th>技能等级</th><th>发证机构</th><th>发证日期</th><th>状态</th><th class="sticky-op">操作</th></tr></thead>
+          <tbody>
+            <tr data-record-row data-certificate="HBCERT-2026-000128" data-job="建筑信息模型技术员" data-level="—" data-org="湖北省智能建造评价中心" data-time="2026-06" data-status="有效"><td>ZSDA-2026-000128</td><td>HBCERT-2026-000128</td><td>张明</td><td>建筑信息模型技术员职业技能证书</td><td>建筑信息模型技术员</td><td>—</td><td>湖北省智能建造评价中心</td><td>2026-06-03</td><td><span class="archive-status success">有效</span></td><td class="sticky-op"><a href="证书档案详情.html?record=zhang">查看</a></td></tr>
+            <tr data-record-row data-certificate="HBCERT-2026-000129" data-job="装配式建筑施工员" data-level="—" data-org="湖北省智能建造评价中心" data-time="2026-07" data-status="有效"><td>ZSDA-2026-000129</td><td>HBCERT-2026-000129</td><td>李建国</td><td>装配式建筑施工员职业技能证书</td><td>装配式建筑施工员</td><td>—</td><td>湖北省智能建造评价中心</td><td>2026-07-10</td><td><span class="archive-status success">有效</span></td><td class="sticky-op"><a href="证书档案详情.html?record=li">查看</a></td></tr>
+            <tr class="archive-empty-row hidden"><td colspan="10" class="archive-empty">未找到符合条件的证书档案</td></tr>
+          </tbody>
+        </table></div></div>
+        <div class="pagination"><span>共 2 条</span><button disabled>‹</button><button class="active">1</button><button disabled>›</button><select><option>10条/页</option></select></div>
+      </section>
+    </div>
+  </main>
+  <script src="assets/business-archives-shell.js"></script><script src="assets/business-archives.js"></script><script src="assets/app.js"></script>
+</body>
+</html>

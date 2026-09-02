@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>培训档案</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/business-archives.css">
+</head>
+<body class="archive-page" data-active-archive="training" data-archive-list="training">
+  <main class="app-main">
+    <div class="page-wrap">
+      <section class="content-card">
+        <header class="page-header">
+          <div class="page-head-row"><div><h1>培训档案</h1><div class="breadcrumb">工作台 / 业务档案 / 培训档案</div></div></div>
+        </header>
+        <div class="archive-filter">
+          <div class="archive-filter-grid">
+            <label><span>关键词</span><input class="control" data-archive-filter data-field="keyword" placeholder="档案编号 / 报名编号 / 姓名"></label>
+            <label><span>工种</span><select class="control" data-archive-filter data-field="job"><option value="">全部</option><option>建筑信息模型技术员</option><option>装配式建筑施工员</option><option>智能装备操作员</option></select></label>
+            <label><span>培训机构</span><select class="control" data-archive-filter data-field="org"><option value="">全部</option><option>湖北数字建造培训中心</option><option>湖北建造产业技能培训学校</option><option>荆楚智能建造人才培训基地</option></select></label>
+            <label><span>培训班次</span><select class="control" data-archive-filter data-field="class"><option value="">全部</option><option>建筑信息模型技术员实务班</option><option>装配式建筑施工员强化班</option><option>智能装备操作员实训班</option></select></label>
+            <label><span>培训月份</span><select class="control" data-archive-filter data-field="time"><option value="">全部</option><option value="2026-05">2026年5月</option><option value="2026-06">2026年6月</option><option value="2026-07">2026年7月</option></select></label>
+            <label><span>培训状态</span><select class="control" data-archive-filter data-field="training-status"><option value="">全部</option><option>已完成</option></select></label>
+            <label><span>送考状态</span><select class="control" data-archive-filter data-field="send-status"><option value="">全部</option><option>已送考</option></select></label>
+          </div>
+          <div class="archive-filter-actions"><button class="btn btn-primary" data-archive-search>搜索</button><button class="btn" data-archive-reset>重置</button></div>
+        </div>
+        <div class="archive-list-meta"><strong>培训档案列表</strong><span>共 <b data-visible-count>3</b> 条</span></div>
+        <div class="archive-table-wrap"><div class="standard-table-shell"><table class="standard-table archive-table">
+          <thead><tr><th>档案编号</th><th>平台报名编号</th><th>姓名</th><th>工种 / 培训项目</th><th>培训机构</th><th>培训班次</th><th>培训时间</th><th>学时完成</th><th>培训状态</th><th>送考状态</th><th>关联考试 / 证书</th><th class="sticky-op">操作</th></tr></thead>
+          <tbody>
+            <tr data-record-row data-job="建筑信息模型技术员" data-org="湖北数字建造培训中心" data-class="建筑信息模型技术员实务班" data-time="2026-05" data-training-status="已完成" data-send-status="已送考"><td>PXDA-2026-00128</td><td>HBIC-2026-000128</td><td>张明</td><td>建筑信息模型技术员</td><td>湖北数字建造培训中心</td><td>建筑信息模型技术员实务班</td><td>2026-05-10 至 05-20</td><td>48 / 48学时</td><td><span class="archive-status success">已完成</span></td><td><span class="archive-status info">已送考</span></td><td>1次考试 / 1本证书</td><td class="sticky-op"><a href="培训档案详情.html?record=zhang">查看</a></td></tr>
+            <tr data-record-row data-job="装配式建筑施工员" data-org="湖北建造产业技能培训学校" data-class="装配式建筑施工员强化班" data-time="2026-06" data-training-status="已完成" data-send-status="已送考"><td>PXDA-2026-00129</td><td>HBIC-2026-000129</td><td>李建国</td><td>装配式建筑施工员</td><td>湖北建造产业技能培训学校</td><td>装配式建筑施工员强化班</td><td>2026-06-08 至 06-22</td><td>56 / 56学时</td><td><span class="archive-status success">已完成</span></td><td><span class="archive-status info">已送考</span></td><td>2次考试 / 1本证书</td><td class="sticky-op"><a href="培训档案详情.html?record=li">查看</a></td></tr>
+            <tr data-record-row data-job="智能装备操作员" data-org="荆楚智能建造人才培训基地" data-class="智能装备操作员实训班" data-time="2026-07" data-training-status="已完成" data-send-status="已送考"><td>PXDA-2026-00130</td><td>HBIC-2026-000130</td><td>周志强</td><td>智能装备操作员</td><td>荆楚智能建造人才培训基地</td><td>智能装备操作员实训班</td><td>2026-07-05 至 07-18</td><td>64 / 64学时</td><td><span class="archive-status success">已完成</span></td><td><span class="archive-status info">已送考</span></td><td>1次考试 / 无证书</td><td class="sticky-op"><a href="培训档案详情.html?record=zhou">查看</a></td></tr>
+            <tr class="archive-empty-row hidden"><td colspan="12" class="archive-empty">未找到符合条件的培训档案</td></tr>
+          </tbody>
+        </table></div></div>
+        <div class="pagination"><span>共 3 条</span><button disabled>‹</button><button class="active">1</button><button disabled>›</button><select><option>10条/页</option></select></div>
+      </section>
+    </div>
+  </main>
+  <script src="assets/business-archives-shell.js"></script><script src="assets/business-archives.js"></script><script src="assets/app.js"></script>
+</body>
+</html>

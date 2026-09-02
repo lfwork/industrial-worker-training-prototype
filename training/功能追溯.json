@@ -1,0 +1,61 @@
+{
+  "source": "V2功能清单/培训机构运营端",
+  "retained_function_count": 24,
+  "prototype_page_count": 28,
+  "shared_registration_detail": "registration-detail.html",
+  "removed_business": [
+    "个人考试报名",
+    "团队考试报名",
+    "考试订单"
+  ],
+  "coverage": {
+    "机构信息维护": [
+      "org-info.html",
+      "org-info-edit.html"
+    ],
+    "课程管理": [
+      "course-list.html",
+      "course-detail.html",
+      "course-edit.html"
+    ],
+    "班次管理": [
+      "class-list.html",
+      "class-detail.html",
+      "class-edit.html"
+    ],
+    "报名管理": [
+      "personal-registration-list.html",
+      "team-registration-list.html",
+      "registration-members.html",
+      "registration-detail.html"
+    ],
+    "报名订单": [
+      "order-list.html",
+      "order-detail.html"
+    ],
+    "培训实施": [
+      "training-class-list.html",
+      "training-class-detail.html",
+      "offline-training-entry.html",
+      "student-archive-list.html",
+      "student-archive-detail.html"
+    ],
+    "培训完成名单": [
+      "completed-trainees.html",
+      "completed-trainee-detail.html"
+    ],
+    "送考批次": [
+      "send-batch-list.html",
+      "send-batch-create.html",
+      "send-batch-detail.html"
+    ],
+    "送考审核反馈": [
+      "send-feedback-list.html",
+      "send-feedback-detail.html"
+    ],
+    "考试安排查询": [
+      "exam-arrangement-list.html",
+      "exam-arrangement-detail.html"
+    ]
+  }
+}

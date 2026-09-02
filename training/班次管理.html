@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>班次列表｜培训机构运营端</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page-id="班次管理.html">
+<header class="topbar">
+<button class="mobile-menu-trigger" type="button">
+<span data-icon="menu">
+</span>
+</button>
+<a class="brand" href="机构信息.html">
+<img src="assets/platform-logo.svg" alt="湖北省智能建造产业互联网平台">
+</a>
+<div class="topbar-right">
+<button class="top-action" data-toast="当前有8项待办">
+<span data-icon="bell">
+</span>
+<span class="notice-dot">
+</span>
+</button>
+<div class="user">
+<div class="avatar">
+<span data-icon="user">
+</span>
+</div>
+<div class="user-copy">
+<strong>培训机构管理员</strong>
+<span>湖北数字建造培训中心</span>
+</div>
+<button>
+<span data-icon="chevronDown">
+</span>
+</button>
+</div>
+</div>
+</header>
+<aside class="sidebar">
+<button class="sidebar-toggle">
+<span data-icon="menu">
+</span>
+</button>
+<nav class="nav-section">
+<a class="nav-group-title " href="机构信息.html">
+<span data-icon="building">
+</span>
+<span>机构信息</span>
+</a>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="book">
+</span>
+<span>课程管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="课程管理.html">课程列表</a>
+</div>
+</div>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="file">
+</span>
+<span>报名管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="个人报名审核.html">个人报名审核</a>
+<a class="nav-link " href="团队报名审核.html">团队报名审核</a>
+<a class="nav-link " href="报名成员名单.html">报名成员名单</a>
+</div>
+</div>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="receipt">
+</span>
+<span>订单管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="报名订单.html">报名订单</a>
+</div>
+</div>
+<div class="nav-group open">
+<button class="nav-group-title active-parent" type="button">
+<span data-icon="graduation">
+</span>
+<span>培训实施</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link active" href="班次管理.html">班次管理</a>
+<a class="nav-link " href="学员档案.html">学员档案</a>
+</div>
+</div>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="shield">
+</span>
+<span>送考管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="培训完成名单.html">培训完成名单</a>
+<a class="nav-link " href="送考批次台账.html">送考批次</a>
+<a class="nav-link " href="送考审核反馈.html">送考审核反馈</a>
+<a class="nav-link " href="考试安排查询.html">考试安排查询</a>
+</div>
+</div>
+</nav>
+</aside>
+<main class="app-main">
+<div class="page-wrap">
+<section class="content-card">
+<header class="page-header">
+<div class="page-head-row">
+<div>
+<h1 class="page-title">班次管理</h1>
+<div class="breadcrumb">
+<a href="班次管理.html">培训实施</a>
+<span class="muted">/</span>
+<span class="muted">班次管理</span>
+</div>
+</div>
+<div class="header-actions">
+<button class="btn" data-toast="列表已导出">
+<span data-icon="export">
+</span>导出</button>
+<a class="btn btn-primary" href="编辑班次.html">＋ 新增班次</a>
+</div>
+</div>
+</header>
+<div class="tabs">
+<button class="tab active" data-demo-tab="全部">全部<span class="tab-count">14</span>
+</button>
+<button class="tab " data-demo-tab="报名中">报名中<span class="tab-count">6</span>
+</button>
+<button class="tab " data-demo-tab="培训中">培训中<span class="tab-count">5</span>
+</button>
+<button class="tab " data-demo-tab="已结束">已结束<span class="tab-count">3</span>
+</button>
+</div>
+<section class="filter-panel">
+<div class="filter-row">
+<div class="field">
+<label>关键词</label>
+<div class="input-wrap">
+<span data-icon="search">
+</span>
+<input class="control has-icon" data-list-keyword placeholder="班次编号 / 班次名称 / 课程">
+</div>
+</div>
+<div class="field">
+<label>工种</label>
+<div class="select-wrap">
+<select class="control" data-list-select>
+<option value="">全部</option>
+<option>建筑信息模型技术员</option>
+<option>工程数据管理员</option>
+</select>
+</div>
+</div>
+<div class="field">
+<label>状态</label>
+<div class="select-wrap">
+<select class="control" data-list-select>
+<option value="">全部</option>
+<option>报名中</option>
+<option>培训中</option>
+<option>已结束</option>
+</select>
+</div>
+</div>
+<div class="filter-actions">
+<button class="btn btn-primary" data-list-search>
+<span data-icon="search">
+</span>搜索</button>
+<button class="btn" data-list-reset>
+<span data-icon="rotate">
+</span>重置</button>
+</div>
+</div>
+</section>
+<div class="standard-table-shell">
+<table class="standard-table" style="min-width:1240px">
+<thead>
+<tr>
+<th class="">班次编号</th>
+<th class="">班次名称</th>
+<th class="">关联课程</th>
+<th class="">报名期</th>
+<th class="">培训期</th>
+<th class="">报名人数 / 招生名额</th>
+<th class="">平均培训进度</th>
+<th class="" style="min-width:90px">状态</th>
+<th class="sticky-op" style="min-width:110px">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr data-filter-row data-status="报名中">
+<td class="">BC-2026-0068</td>
+<td class="">建筑信息模型技术员实务班</td>
+<td class="">建筑信息模型技术员实务课程</td>
+<td class="">08-20 至 09-25</td>
+<td class="">10-12 至 11-08</td>
+<td class="">32 / 50</td>
+<td class="">0%</td>
+<td class="">
+<span class="tag tag-green">
+<span class="status-dot">
+</span>报名中</span>
+</td>
+<td class="sticky-op">
+<a class="link" href="班次详情.html">查看</a>
+<a class="link" href="编辑班次.html">编辑</a>
+</td>
+</tr>
+<tr data-filter-row data-status="报名中">
+<td class="">BC-2026-0062</td>
+<td class="">工程数据管理员线上班</td>
+<td class="">工程数据管理基础课程</td>
+<td class="">08-18 至 09-20</td>
+<td class="">10-01 至 10-30</td>
+<td class="">42 / 60</td>
+<td class="">0%</td>
+<td class="">
+<span class="tag tag-green">
+<span class="status-dot">
+</span>报名中</span>
+</td>
+<td class="sticky-op">
+<a class="link" href="班次详情.html#second">查看</a>
+<a class="link" href="编辑班次.html#second">编辑</a>
+</td>
+</tr>
+<tr data-filter-row data-status="培训中">
+<td class="">BC-2026-0056</td>
+<td class="">装配式建筑施工员实训班</td>
+<td class="">装配式建筑施工员综合课程</td>
+<td class="">07-15 至 08-05</td>
+<td class="">08-12 至 09-18</td>
+<td class="">38 / 40</td>
+<td class="">68%</td>
+<td class=""><span class="tag tag-blue"><span class="status-dot"></span>培训中</span></td>
+<td class="sticky-op"><a class="link" href="班次详情.html#training">查看</a><a class="link" href="编辑班次.html#training">编辑</a></td>
+</tr>
+<tr data-filter-row data-status="已结束">
+<td class="">BC-2026-0041</td>
+<td class="">智能装备操作员实训班</td>
+<td class="">智能装备操作与安全课程</td>
+<td class="">05-10 至 05-31</td>
+<td class="">06-08 至 07-20</td>
+<td class="">45 / 45</td>
+<td class="">100%</td>
+<td class=""><span class="tag tag-gray"><span class="status-dot"></span>已结束</span></td>
+<td class="sticky-op"><a class="link" href="班次详情.html#ended">查看</a></td>
+</tr>
+<tr class="empty-row hidden">
+<td colspan="9">未找到符合条件的记录</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pagination">
+<span>共 14 条</span>
+<button class="page-btn" disabled>
+<span data-icon="chevronLeft">
+</span>
+</button>
+<button class="page-btn active">1</button>
+<button class="page-btn" data-toast="已切换到第2页">2</button>
+<button class="page-btn">
+<span data-icon="chevronRight">
+</span>
+</button>
+<select class="page-size">
+<option>10 条/页</option>
+<option>20 条/页</option>
+</select>
+</div>
+</section>
+</div>
+</main>
+<div class="toast-stack">
+</div><script src="assets/app.js"></script></body></html>

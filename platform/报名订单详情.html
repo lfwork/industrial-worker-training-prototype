@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>报名订单详情｜产业培育平台运营端</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page-id="报名订单详情.html">
+<header class="topbar">
+<button class="mobile-menu-trigger" type="button">
+<span data-icon="menu">
+</span>
+</button>
+<a class="brand" href="工作台.html">
+<img src="assets/platform-logo.svg" alt="湖北省智能建造产业互联网平台">
+</a>
+<div class="topbar-right">
+<button class="top-action" data-toast="当前有11项待办">
+<span data-icon="bell">
+</span>
+<span class="notice-dot">
+</span>
+</button>
+<div class="user">
+<div class="avatar">
+<span data-icon="user">
+</span>
+</div>
+<div class="user-copy">
+<strong>平台运营管理员</strong>
+<span>产业培育运营中心</span>
+</div>
+<button>
+<span data-icon="chevronDown">
+</span>
+</button>
+</div>
+</div>
+</header>
+<aside class="sidebar">
+<button class="sidebar-toggle">
+<span data-icon="menu">
+</span>
+</button>
+<nav class="nav-section">
+<a class="nav-group-title " href="工作台.html">
+<span data-icon="home">
+</span>
+<span>工作台</span>
+</a>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="file">
+</span>
+<span>专区内容管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="Banner管理.html">Banner管理</a>
+<a class="nav-link " href="通知公告管理.html">通知公告管理</a>
+<a class="nav-link " href="政策管理.html">政策管理</a>
+</div>
+</div>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="book">
+</span>
+<span>培训课程管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="课程发布审核.html">课程发布审核</a>
+<a class="nav-link " href="课程管理.html">课程管理</a>
+<a class="nav-link " href="班次管理.html">班次管理</a>
+</div>
+</div>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="shield">
+</span>
+<span>考试项目管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="考试项目审核.html">考试项目审核</a>
+<a class="nav-link " href="考试管理.html">考试管理</a>
+</div>
+</div>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="building">
+</span>
+<span>机构管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="培训机构管理.html">培训机构管理</a>
+<a class="nav-link " href="评价机构管理.html">评价机构管理</a>
+</div>
+</div>
+<div class="nav-group open">
+<button class="nav-group-title active-parent" type="button">
+<span data-icon="receipt">
+</span>
+<span>报名管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link" href="报名记录.html">报名记录</a><a class="nav-link active" href="报名订单.html">报名订单</a>
+</div>
+</div>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="clipboard">
+</span>
+<span>送考管理</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="送考批次台账.html">送考批次台账</a>
+<a class="nav-link " href="送考进度.html">送考进度</a>
+</div>
+</div>
+<div class="nav-group ">
+<button class="nav-group-title " type="button">
+<span data-icon="graduation">
+</span>
+<span>业务档案</span>
+<span class="chev" data-icon="chevronRight">
+</span>
+</button>
+<div class="nav-children">
+<a class="nav-link " href="一人一档.html">一人一档</a>
+<a class="nav-link " href="培训档案.html">培训档案</a>
+<a class="nav-link " href="考试档案.html">考试档案</a>
+<a class="nav-link " href="证书档案.html">证书档案</a>
+</div>
+</div>
+</nav>
+</aside>
+<main class="app-main">
+<div class="page-wrap">
+<section class="content-card">
+<header class="page-header">
+<div class="page-head-row">
+<div>
+<a class="back-link" href="报名订单.html">
+<span data-icon="arrowLeft">
+</span>返回报名订单</a>
+<h1 class="page-title">报名订单详情</h1>
+<div class="breadcrumb">
+<a href="工作台.html">工作台</a>
+<span class="muted">/</span>
+<a href="报名订单.html">报名管理</a>
+<span class="muted">/</span>
+<span class="muted">报名订单详情</span>
+</div>
+</div>
+<div class="header-actions">
+<button class="btn btn-primary" id="order-verify-trigger" type="button">平台核款</button>
+</div>
+</div>
+</header>
+<div class="detail-body">
+<div class="record-banner">
+<div class="record-banner-main">
+<span class="record-symbol">
+<span data-icon="receipt">
+</span>
+</span>
+<div>
+<h2>中建三局二公司 · 团队报名订单</h2>
+<p>订单号：BMDD-20260820-00128　·　团队任务：TD-20260820-0018</p>
+</div>
+</div>
+<div class="record-banner-side">
+<div class="record-number">
+<span>应付金额</span>
+<strong class="money">¥44,240</strong>
+</div>
+<span class="tag tag-orange" id="order-status-tag">
+<span class="status-dot">
+</span><span id="order-status-text">待平台核款</span></span>
+</div>
+</div>
+<div class="main-stack">
+<section class="plain-card">
+<div class="block-head">
+<h2>订单信息</h2>
+</div>
+<div class="plain-card-body">
+<div class="detail-grid">
+<div class="detail-item ">
+<span class="detail-label">付款方</span>
+<span class="detail-value">中建三局二公司</span>
+</div>
+<div class="detail-item ">
+<span class="detail-label">培训班次</span>
+<span class="detail-value">建筑信息模型技术员实务班</span>
+</div>
+<div class="detail-item ">
+<span class="detail-label">订单人数</span>
+<span class="detail-value">28人</span>
+</div>
+<div class="detail-item ">
+<span class="detail-label">支付方式</span>
+<span class="detail-value">线下对公转账</span>
+</div>
+<div class="detail-item ">
+<span class="detail-label">创建时间</span>
+<span class="detail-value">2026-08-20 09:58</span>
+</div>
+<div class="detail-item ">
+<span class="detail-label">订单提交人</span>
+<span class="detail-value">周工</span>
+</div>
+<div class="detail-item ">
+<span class="detail-label">提交人联系电话</span>
+<span class="detail-value">139****5816</span>
+</div>
+<div class="detail-item ">
+<span class="detail-label">提交时间</span>
+<span class="detail-value">2026-08-20 10:15</span>
+</div>
+<div class="detail-item ">
+<span class="detail-label">订单状态</span>
+<span class="detail-value" id="order-status-value">待平台核款</span>
+</div>
+</div>
+</div>
+</section>
+<section class="plain-card">
+<div class="block-head">
+<h2>费用明细</h2>
+</div>
+<div class="plain-card-body">
+<div class="standard-table-shell">
+<table class="standard-table" style="min-width:720px">
+<thead>
+<tr>
+<th class="">费用项目</th>
+<th class="">单人标准</th>
+<th class="">人数</th>
+<th class="sticky-op">小计</th>
+</tr>
+</thead>
+<tbody>
+<tr data-filter-row data-status="全部">
+<td class="">培训费</td>
+<td class="">¥1,280</td>
+<td class="">28人</td>
+<td class="sticky-op">¥35,840</td>
+</tr>
+<tr data-filter-row data-status="全部">
+<td class="">考试费</td>
+<td class="">¥300</td>
+<td class="">28人</td>
+<td class="sticky-op">¥8,400</td>
+</tr>
+<tr data-filter-row data-status="全部">
+<td class="">报名订单合计</td>
+<td class="">—</td>
+<td class="">28人</td>
+<td class="sticky-op">¥44,240</td>
+</tr>
+<tr class="empty-row hidden">
+<td colspan="4">未找到符合条件的记录</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pagination">
+<span>共 3 条</span>
+<button class="page-btn" disabled>
+<span data-icon="chevronLeft">
+</span>
+</button>
+<button class="page-btn active">1</button>
+<button class="page-btn" data-toast="已切换到第2页">2</button>
+<button class="page-btn">
+<span data-icon="chevronRight">
+</span>
+</button>
+<select class="page-size">
+<option>10 条/页</option>
+<option>20 条/页</option>
+</select>
+</div>
+</div>
+</section>
+<section class="plain-card">
+<div class="block-head">
+<h2>成员费用明细</h2>
+</div>
+<div class="plain-card-body">
+<div class="standard-table-shell">
+<table class="standard-table" style="min-width:860px">
+<thead>
+<tr>
+<th class="">平台报名编号</th>
+<th class="">姓名</th>
+<th class="">资料状态</th>
+<th class="">本人确认</th>
+<th class="">个人费用</th>
+<th class="sticky-op">订单状态</th>
+</tr>
+</thead>
+<tbody>
+<tr data-filter-row data-status="全部">
+<td class=""><a class="link" href="报名记录详情.html?record=zhang-team">HBIC-2026-000128</a></td>
+<td class="">张明</td>
+<td class="">
+<span class="tag tag-green">
+<span class="status-dot">
+</span>合格</span>
+</td>
+<td class="">
+<span class="tag tag-green">
+<span class="status-dot">
+</span>已确认</span>
+</td>
+<td class="">¥1,580</td>
+<td class="sticky-op">
+<span class="tag tag-green">
+<span class="status-dot">
+</span>已纳入</span>
+</td>
+</tr>
+<tr data-filter-row data-status="全部">
+<td class=""><a class="link" href="报名记录详情.html?record=li-team">HBIC-2026-000129</a></td>
+<td class="">李建国</td>
+<td class="">
+<span class="tag tag-green">
+<span class="status-dot">
+</span>合格</span>
+</td>
+<td class="">
+<span class="tag tag-green">
+<span class="status-dot">
+</span>已确认</span>
+</td>
+<td class="">¥1,580</td>
+<td class="sticky-op">
+<span class="tag tag-green">
+<span class="status-dot">
+</span>已纳入</span>
+</td>
+</tr>
+<tr data-filter-row data-status="全部">
+<td class=""><a class="link" href="报名记录详情.html?record=chen-team">HBIC-2026-000136</a></td>
+<td class="">陈浩</td>
+<td class="">
+<span class="tag tag-orange">
+<span class="status-dot">
+</span>待补充</span>
+</td>
+<td class="">
+<span class="tag tag-gray">
+<span class="status-dot">
+</span>未确认</span>
+</td>
+<td class="">—</td>
+<td class="sticky-op">
+<span class="tag tag-gray">
+<span class="status-dot">
+</span>未纳入</span>
+</td>
+</tr>
+<tr class="empty-row hidden">
+<td colspan="6">未找到符合条件的记录</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pagination">
+<span>共 3 条</span>
+<button class="page-btn" disabled>
+<span data-icon="chevronLeft">
+</span>
+</button>
+<button class="page-btn active">1</button>
+<button class="page-btn" data-toast="已切换到第2页">2</button>
+<button class="page-btn">
+<span data-icon="chevronRight">
+</span>
+</button>
+<select class="page-size">
+<option>10 条/页</option>
+<option>20 条/页</option>
+</select>
+</div>
+</div>
+</section>
+<section class="plain-card">
+<div class="block-head">
+<h2>汇款凭证</h2>
+</div>
+<div class="plain-card-body">
+<div class="detail-grid">
+<div class="detail-item ">
+<span class="detail-label">付款单位</span>
+<span class="detail-value">中建三局二公司</span>
+</div>
+<div class="detail-item ">
+<span class="detail-label">付款时间</span>
+<span class="detail-value">2026-08-20 10:12</span>
+</div>
+<div class="detail-item ">
+<span class="detail-label">银行流水号</span>
+<span class="detail-value">EBANK2026082010120036</span>
+</div>
+<div class="detail-item ">
+<span class="detail-label">汇款金额</span>
+<span class="detail-value">¥44,240</span>
+</div>
+</div>
+<div class="file-card">
+<div class="file-info">
+<span data-icon="attachment">
+</span>
+<div>
+<strong>对公汇款凭证.jpg</strong>
+<span>1.8 MB · 团队负责人上传</span>
+</div>
+</div>
+<button class="link" data-toast="汇款凭证预览已打开">预览</button>
+</div>
+</div>
+</section>
+<section class="plain-card hidden" id="order-verify-detail">
+<div class="block-head">
+<h2>核款详情</h2>
+</div>
+<div class="plain-card-body">
+<div class="detail-grid">
+<div class="detail-item"><span class="detail-label">核款人</span><span class="detail-value">平台财务管理员</span></div>
+<div class="detail-item"><span class="detail-label">核款结果</span><span class="detail-value" id="verify-result-value">核款通过</span></div>
+<div class="detail-item"><span class="detail-label">核款时间</span><span class="detail-value" id="verify-time-value">2026-08-20 10:30</span></div>
+<div class="detail-item"><span class="detail-label">核款附件</span><span class="detail-value" id="verify-file-value">—</span></div>
+<div class="detail-item wide"><span class="detail-label">备注</span><span class="detail-value" id="verify-note-value">—</span></div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</section>
+</div>
+</main>
+<div id="order-verify-modal" class="modal-mask" aria-hidden="true">
+<section class="modal" role="dialog" aria-modal="true" aria-labelledby="order-verify-title">
+<header class="modal-head">
+<h2 id="order-verify-title">平台核款</h2>
+<button class="icon-btn" type="button" data-close-order-verify aria-label="关闭">×</button>
+</header>
+<div class="modal-body">
+<div class="service-modal-choice">
+<label class="choice-card selected" data-verify-choice="通过"><input type="radio" name="verify-result" value="通过" checked>核款通过</label>
+<label class="choice-card" data-verify-choice="退回"><input type="radio" name="verify-result" value="退回">退回补正</label>
+</div>
+<label class="field"><span>核款附件</span><input class="control" id="order-verify-file" type="file" accept=".jpg,.jpeg,.png,.pdf"></label>
+<label class="field"><span>备注</span><textarea class="control" id="order-verify-note" rows="4" placeholder="请输入核款备注；退回补正时必填"></textarea></label>
+<div class="error" id="order-verify-error"></div>
+</div>
+<footer class="modal-foot">
+<button class="btn" type="button" data-close-order-verify>取消</button>
+<button class="btn btn-primary" id="order-verify-submit" type="button">提交核款结果</button>
+</footer>
+</section>
+</div>
+<div id="service-state-modal" class="modal-mask">
+<section class="modal">
+<header class="modal-head">
+<h2>维护服务状态</h2>
+<button class="icon-btn" type="button" data-close-overlay>
+<span data-icon="close">
+</span>
+</button>
+</header>
+<div class="modal-body">
+<p>机构：<strong data-service-org>—</strong>
+</p>
+<div class="service-modal-choice">
+<label class="choice-card selected">
+<input type="radio" name="service-choice" value="暂停服务" checked>暂停服务</label>
+<label class="choice-card">
+<input type="radio" name="service-choice" value="终止服务">终止服务</label>
+</div>
+<label class="field">
+<span>维护原因</span>
+<textarea id="service-reason" class="control" rows="4">
+</textarea>
+</label>
+<div id="service-error" class="error">
+</div>
+</div>
+<footer class="modal-foot">
+<button class="btn" data-close-overlay>取消</button>
+<button id="service-confirm" class="btn btn-danger">确认</button>
+</footer>
+</section>
+</div>
+<div class="toast-stack"></div>
+<script src="assets/app.js"></script>
+<script>
+(function () {
+  const trigger = document.getElementById('order-verify-trigger');
+  const modal = document.getElementById('order-verify-modal');
+  const detail = document.getElementById('order-verify-detail');
+  const choices = Array.from(document.querySelectorAll('[data-verify-choice]'));
+  const resultInputs = Array.from(document.querySelectorAll('input[name="verify-result"]'));
+  const note = document.getElementById('order-verify-note');
+  const file = document.getElementById('order-verify-file');
+  const error = document.getElementById('order-verify-error');
+  let completed = false;
+
+  function toggleModal(open) {
+    modal.classList.toggle('open', open);
+    modal.setAttribute('aria-hidden', String(!open));
+  }
+  function toast(message) {
+    const item = document.createElement('div');
+    item.className = 'toast';
+    item.textContent = message;
+    document.querySelector('.toast-stack').appendChild(item);
+    window.setTimeout(function () { item.remove(); }, 2200);
+  }
+  trigger.addEventListener('click', function () {
+    if (completed) {
+      detail.scrollIntoView({behavior: 'smooth', block: 'start'});
+      return;
+    }
+    toggleModal(true);
+  });
+  document.querySelectorAll('[data-close-order-verify]').forEach(function (button) {
+    button.addEventListener('click', function () { toggleModal(false); });
+  });
+  choices.forEach(function (card) {
+    card.addEventListener('click', function () {
+      choices.forEach(function (item) { item.classList.remove('selected'); });
+      card.classList.add('selected');
+      card.querySelector('input').checked = true;
+      error.textContent = '';
+    });
+  });
+  document.getElementById('order-verify-submit').addEventListener('click', function () {
+    const result = resultInputs.find(function (input) { return input.checked; }).value;
+    const noteValue = note.value.trim();
+    if (result === '退回' && !noteValue) {
+      error.textContent = '退回补正时请填写备注。';
+      note.focus();
+      return;
+    }
+    const passed = result === '通过';
+    const statusText = passed ? '已核款' : '核款退回';
+    const statusTag = document.getElementById('order-status-tag');
+    statusTag.className = passed ? 'tag tag-green' : 'tag tag-orange';
+    document.getElementById('order-status-text').textContent = statusText;
+    document.getElementById('order-status-value').textContent = statusText;
+    document.getElementById('verify-result-value').textContent = passed ? '核款通过' : '退回补正';
+    document.getElementById('verify-time-value').textContent = '2026-08-20 10:30';
+    document.getElementById('verify-file-value').textContent = file.files.length ? file.files[0].name : '未上传';
+    document.getElementById('verify-note-value').textContent = noteValue || '核款信息一致。';
+    detail.classList.remove('hidden');
+    trigger.textContent = '查看核款详情';
+    completed = true;
+    toggleModal(false);
+    toast(passed ? '核款结果已提交' : '订单已退回补正');
+  });
+})();
+</script>
+</body>
+</html>
