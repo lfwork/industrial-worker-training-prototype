@@ -45,6 +45,7 @@
   var CONFIGS = [
     {
       match: "_PC端HTML原型_V2",
+      publishMatch: "/pc/",
       endpoint: "PC端",
       menus: [
         menu("专区首页", [page("首页")]),
@@ -124,6 +125,7 @@
     },
     {
       match: "_平台运营管理端HTML原型_V2",
+      publishMatch: "/platform/",
       endpoint: "平台运营管理端",
       menus: [
         menu("专区内容管理", [
@@ -212,6 +214,7 @@
     },
     {
       match: "_培训机构运营端HTML原型_V2",
+      publishMatch: "/training/",
       endpoint: "培训机构管理端",
       menus: [
         menu("机构信息", [page("机构信息", [page("编辑机构信息")])]),
@@ -270,6 +273,7 @@
     },
     {
       match: "_评价机构运营端HTML原型_V2",
+      publishMatch: "/evaluation/",
       endpoint: "评价机构管理端",
       menus: [
         menu("机构信息", [page("机构信息", [page("编辑机构信息")])]),
@@ -592,7 +596,9 @@
 
   var decodedPath;
   try { decodedPath = decodeURIComponent(location.pathname); } catch (error) { decodedPath = location.pathname; }
-  var config = CONFIGS.find(function (item) { return decodedPath.indexOf(item.match) !== -1; });
+  var config = CONFIGS.find(function (item) {
+    return decodedPath.indexOf(item.match) !== -1 || (item.publishMatch && decodedPath.indexOf(item.publishMatch) !== -1);
+  });
   if (!config) return;
 
   var currentFile = decodedPath.split(/[\\/]/).pop() || "";
