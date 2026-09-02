@@ -52,6 +52,16 @@
       font-size: 14px;
     }
     .summary strong { color: var(--text); }
+    .summary-actions { display: flex; flex: none; gap: 10px; }
+    .rule-trigger, .modal-close {
+      border: 0;
+      border-radius: 7px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .rule-trigger { padding: 10px 14px; background: #e8f1ff; color: var(--primary); white-space: nowrap; }
+    .rule-trigger:hover { background: #dceaff; }
     .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; padding-bottom: 52px; }
     .card {
       position: relative;
@@ -115,6 +125,33 @@
     .training { --accent: #6b61d8; --tint: #efedff; }
     .evaluation { --accent: #e37b35; --tint: #fff0e6; }
     footer { padding: 20px 0 34px; border-top: 1px solid var(--line); color: #8092ac; font-size: 13px; }
+    dialog {
+      width: min(1160px, calc(100% - 40px));
+      max-height: min(760px, calc(100vh - 40px));
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+      border-radius: 16px;
+      box-shadow: 0 24px 70px rgba(19, 46, 82, .28);
+      color: var(--text);
+    }
+    dialog::backdrop { background: rgba(18, 38, 68, .45); backdrop-filter: blur(2px); }
+    .modal-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding: 24px 28px 18px; border-bottom: 1px solid var(--line); background: #f8fbff; }
+    .modal-head h2 { font-size: 22px; }
+    .modal-head p { margin: 7px 0 0; color: var(--muted); font-size: 13px; }
+    .modal-close { width: 34px; height: 34px; flex: none; background: #eef4fc; color: #547096; font-size: 22px; line-height: 1; }
+    .modal-body { max-height: calc(min(760px, 100vh - 40px) - 110px); padding: 20px 28px 28px; overflow: auto; }
+    .rules-table { width: 100%; min-width: 900px; border-collapse: separate; border-spacing: 0; font-size: 13px; line-height: 1.65; }
+    .rules-table th, .rules-table td { padding: 13px 14px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .rules-table th { position: sticky; top: 0; z-index: 1; background: #edf4fd; color: #29466f; font-weight: 700; }
+    .rules-table tr > :first-child { border-left: 1px solid var(--line); }
+    .rules-table thead tr > :first-child { border-top-left-radius: 8px; }
+    .rules-table thead tr > :last-child { border-top-right-radius: 8px; }
+    .rules-table tbody tr:last-child > :first-child { border-bottom-left-radius: 8px; }
+    .rules-table tbody tr:last-child > :last-child { border-bottom-right-radius: 8px; }
+    .rules-table td:first-child { min-width: 112px; color: #203d66; font-weight: 700; white-space: nowrap; }
+    .rules-table td:nth-child(2), .rules-table td:nth-child(3) { white-space: nowrap; }
+    .rules-table code { padding: 2px 5px; border-radius: 4px; background: #f2f6fb; color: #315887; font-family: Consolas, "Courier New", monospace; font-size: 12px; }
     @media (max-width: 720px) {
       .shell { width: min(100% - 32px, 1160px); }
       header { padding-top: 44px; }
@@ -133,7 +170,10 @@
 
     <section class="summary" aria-label="原型说明">
       <span><strong>访问说明：</strong>四端原型均为静态演示数据，仅用于业务方案交流与原型评审。</span>
-      <span>一期业务链路：报名 → 缴费 → 培训 → 送考 → 考试 → 成绩 → 证书</span>
+      <div class="summary-actions">
+        <span>一期业务链路：报名 → 缴费 → 培训 → 送考 → 考试 → 成绩 → 证书</span>
+        <button class="rule-trigger" type="button" id="open-number-rules">业务编号规则</button>
+      </div>
     </section>
 
     <section class="cards" aria-label="应用端入口">
@@ -164,5 +204,41 @@
 
     <footer>产业工人培训考试取证平台 · HTML 原型演示</footer>
   </main>
+
+  <dialog id="number-rules-dialog" aria-labelledby="number-rules-title">
+    <div class="modal-head">
+      <div><h2 id="number-rules-title">业务编号规则</h2><p>以下为一期原型中各业务对象的统一编号规则及适用菜单。</p></div>
+      <button class="modal-close" type="button" aria-label="关闭" id="close-number-rules">×</button>
+    </div>
+    <div class="modal-body">
+      <table class="rules-table">
+        <thead><tr><th>编号对象</th><th>编号规则</th><th>示例</th><th>适用端 / 菜单</th></tr></thead>
+        <tbody>
+          <tr><td>平台报名编号</td><td><code>HBIC-YYYY-6位流水</code></td><td><code>HBIC-2026-000128</code></td><td>PC端－我的培训考试；培训机构端－报名管理、学员档案、送考管理；平台端－报名记录、业务档案；评价机构端－考生、成绩与证书</td></tr>
+          <tr><td>报名订单号</td><td><code>BMDD-YYYYMMDD-5位流水</code></td><td><code>BMDD-20260820-00128</code></td><td>培训机构端－报名订单；平台端－报名订单</td></tr>
+          <tr><td>课程编号</td><td><code>KC-YYYY-4位流水</code></td><td><code>KC-2026-0018</code></td><td>培训机构端－课程管理；平台端－课程管理</td></tr>
+          <tr><td>班次编号</td><td><code>BC-YYYY-4位流水</code></td><td><code>BC-2026-0068</code></td><td>培训机构端－班次管理；平台端－班次管理</td></tr>
+          <tr><td>培训机构编号</td><td><code>PXJG-YYYY-4位流水</code></td><td><code>PXJG-2026-0018</code></td><td>培训机构端－机构信息；平台端－培训机构管理</td></tr>
+          <tr><td>评价机构编号</td><td><code>PJJG-YYYY-4位流水</code></td><td><code>PJJG-2026-0008</code></td><td>评价机构端－机构信息；平台端－评价机构管理。平台端个别原型页面现写作 <code>PJ</code> 前缀，统一以 <code>PJJG</code> 为准。</td></tr>
+          <tr><td>考试项目编号</td><td><code>PJ-YYYY-4位流水</code></td><td><code>PJ-2026-0028</code></td><td>评价机构端－考试项目列表；平台端－考试管理</td></tr>
+          <tr><td>送考批次号</td><td><code>SKPC-YYYYMMDD-4位流水</code></td><td><code>SKPC-20260820-0006</code></td><td>培训机构端－送考批次、送考审核反馈；平台端－送考批次台账、送考进度；评价机构端－送考批次</td></tr>
+          <tr><td>考试批次号</td><td><code>KSPC-YYYYMMDD-4位流水</code></td><td><code>KSPC-20260918-0002</code></td><td>培训机构端－考试安排查询；评价机构端－考试批次、成绩管理、成绩发布、证书发放</td></tr>
+          <tr><td>准考证号</td><td><code>ZK+YYYYMMDD+4位流水</code></td><td><code>ZK202609180086</code></td><td>PC端－考试安排；培训机构端－考试安排查询；评价机构端－准考证管理、成绩管理</td></tr>
+          <tr><td>证书编号</td><td><code>HBCERT-YYYY-6位流水</code></td><td><code>HBCERT-2026-000128</code></td><td>PC端－我的培训考试、证书查验；平台端－证书档案；评价机构端－证书发放</td></tr>
+          <tr><td>培训档案编号</td><td><code>PXDA-YYYY-5位流水</code></td><td><code>PXDA-2026-00128</code></td><td>培训机构端－学员档案；平台端－培训档案</td></tr>
+          <tr><td>考试档案编号</td><td><code>KSD-YYYY-6位流水</code></td><td><code>KSD-2026-000201</code></td><td>平台端－考试档案</td></tr>
+          <tr><td>证书档案编号</td><td><code>ZSDA-YYYY-6位流水</code></td><td><code>ZSDA-2026-000128</code></td><td>平台端－证书档案</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </dialog>
+  <script>
+    (function () {
+      var dialog = document.getElementById('number-rules-dialog');
+      document.getElementById('open-number-rules').addEventListener('click', function () { dialog.showModal(); });
+      document.getElementById('close-number-rules').addEventListener('click', function () { dialog.close(); });
+      dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });
+    }());
+  </script>
 </body>
 </html>
