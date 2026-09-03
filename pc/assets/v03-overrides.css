@@ -105,3 +105,6 @@ body[data-page="order-training"] .page-heading p{display:none}
 .prototype-page .detail-grid.certificate-detail-grid{grid-template-columns:minmax(0,1fr) 330px}
 .certificate-core .summary-list{margin-bottom:20px}
 .certificate-core .summary-list dd{max-width:220px}
+
+/* PC端专区入口统一由首页快捷功能承接，不再展示二级页签导航。 */
+.zone-nav-wrap{display:none!important}

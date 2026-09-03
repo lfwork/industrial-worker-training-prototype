@@ -12,3 +12,7 @@
 @media(max-width:520px){.resource-card-grid{grid-template-columns:1fr}}
 .resource-cover-icon{display:none}.resource-cover-copy{max-width:78%}
 .resource-card-actions a[href="个人培训报名.html"]{display:none}
+
+/* 仅考试计划卡片不展示费用，课程费用保持正常展示。 */
+.prototype-page[data-page="evaluation-services"] .resource-price{display:none}
+.prototype-page[data-page="evaluation-services"] .resource-card-foot{justify-content:flex-end}

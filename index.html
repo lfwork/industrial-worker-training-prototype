@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="产业工人培训考试取证平台四端原型集合页">
+  <meta name="description" content="产业工人培训考试取证平台原型集合页">
   <title>产业工人培训考试取证平台｜原型集合</title>
   <style>
     :root {
@@ -62,10 +62,11 @@
     }
     .rule-trigger { padding: 10px 14px; background: #e8f1ff; color: var(--primary); white-space: nowrap; }
     .rule-trigger:hover { background: #dceaff; }
-    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; padding-bottom: 24px; }
+    .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px 18px; padding-bottom: 24px; }
     .card {
       position: relative;
       display: flex;
+      grid-column: span 2;
       min-height: 202px;
       flex-direction: column;
       padding: 22px 28px;
@@ -121,9 +122,14 @@
     .open:hover { transform: translateY(-2px); box-shadow: 0 8px 16px color-mix(in srgb, var(--accent) 28%, transparent); }
     .open:focus-visible { outline: 3px solid #89bbff; outline-offset: 3px; }
     .pc { --accent: #2878f0; --tint: #e8f1ff; }
+    .mobile { --accent: #209b8d; --tint: #e4f7f3; }
     .platform { --accent: #1a968b; --tint: #e3f7f4; }
     .training { --accent: #6b61d8; --tint: #efedff; }
     .evaluation { --accent: #e37b35; --tint: #fff0e6; }
+    .card.compact { grid-column: span 1; padding-right: 22px; padding-left: 22px; }
+    .card.compact .card-top { gap: 11px; }
+    .card.compact h2 { font-size: 18px; }
+    .card.compact .description { font-size: 13px; }
     dialog {
       width: min(1160px, calc(100% - 40px));
       max-height: min(760px, calc(100vh - 40px));
@@ -156,6 +162,7 @@
       header { padding-top: 34px; }
       .summary { align-items: flex-start; flex-direction: column; }
       .cards { grid-template-columns: 1fr; }
+      .card, .card.compact { grid-column: span 1; }
     }
   </style>
 </head>
@@ -168,33 +175,39 @@
     </header>
 
     <section class="summary" aria-label="原型说明">
-      <span><strong>访问说明：</strong>四端原型均为静态演示数据，仅用于业务方案交流与原型评审；一期业务链路为报名 → 缴费 → 培训 → 送考 → 考试 → 成绩 → 证书。</span>
+      <span><strong>访问说明：</strong>各应用端原型均为静态演示数据，仅用于业务方案交流与原型评审；一期业务链路为报名 → 缴费 → 培训 → 送考 → 考试 → 成绩 → 证书。</span>
       <div class="summary-actions">
         <button class="rule-trigger" type="button" id="open-number-rules">业务编号规则</button>
       </div>
     </section>
 
     <section class="cards" aria-label="应用端入口">
-      <article class="card pc">
+      <article class="card compact pc">
         <div class="card-top"><span class="icon">01</span><div><h2>培训考试专区 PC 端</h2><p class="role">学员 / 团队负责人</p></div></div>
         <p class="description">面向产业工人开展课程浏览、报名缴费、培训学习、考试查询及证书查验等业务。</p>
-        <a class="open" href="pc/首页.html" target="_blank" rel="noopener noreferrer">进入专区首页 <span aria-hidden="true">→</span></a>
+        <a class="open" href="pc/首页.html" target="_blank" rel="noopener noreferrer">进入PC端首页 <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="card compact mobile">
+        <div class="card-top"><span class="icon">02</span><div><h2>培训考试专区移动端</h2><p class="role">学员 / 团队负责人</p></div></div>
+        <p class="description">面向产业工人开展移动端课程浏览、报名缴费、培训学习、考试查询及证书查验等业务。</p>
+        <a class="open" href="mobile/首页.html" target="_blank" rel="noopener noreferrer">进入移动端首页 <span aria-hidden="true">→</span></a>
       </article>
 
       <article class="card platform">
-        <div class="card-top"><span class="icon">02</span><div><h2>平台运营管理端</h2><p class="role">平台运营管理员</p></div></div>
+        <div class="card-top"><span class="icon">03</span><div><h2>平台运营管理端</h2><p class="role">平台运营管理员</p></div></div>
         <p class="description">面向平台运营人员开展专区内容、机构、报名、送考进度及业务档案的运营管理。</p>
         <a class="open" href="platform/Banner管理.html" target="_blank" rel="noopener noreferrer">进入Banner管理 <span aria-hidden="true">→</span></a>
       </article>
 
       <article class="card training">
-        <div class="card-top"><span class="icon">03</span><div><h2>培训机构管理端</h2><p class="role">培训机构管理员</p></div></div>
+        <div class="card-top"><span class="icon">04</span><div><h2>培训机构管理端</h2><p class="role">培训机构管理员</p></div></div>
         <p class="description">面向培训机构开展课程班次、报名受理、培训实施、送考提交及考试安排查询。</p>
         <a class="open" href="training/机构信息.html" target="_blank" rel="noopener noreferrer">进入机构信息 <span aria-hidden="true">→</span></a>
       </article>
 
       <article class="card evaluation">
-        <div class="card-top"><span class="icon">04</span><div><h2>评价机构管理端</h2><p class="role">评价机构管理员</p></div></div>
+        <div class="card-top"><span class="icon">05</span><div><h2>评价机构管理端</h2><p class="role">评价机构管理员</p></div></div>
         <p class="description">面向评价机构开展考试项目、送考审核、考务执行、成绩发布和证书发放等业务。</p>
         <a class="open" href="evaluation/机构信息.html" target="_blank" rel="noopener noreferrer">进入机构信息 <span aria-hidden="true">→</span></a>
       </article>

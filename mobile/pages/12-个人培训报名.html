@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>H12 个人培训报名｜工人H5端</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="page-register">
+  <div class="prototype-shell register-shell">
+    <header class="app-bar register-app-bar">
+      <a class="icon-button" id="registrationBack" href="03-课程详情.html" aria-label="返回课程详情"><i data-lucide="arrow-left"></i></a>
+      <h1>个人培训报名</h1>
+      <button class="icon-button" type="button" data-toast="本页只办理本人报名；团队报名请从课程详情选择团队路径" aria-label="报名须知"><i data-lucide="circle-help"></i></button>
+    </header>
+
+    <main class="register-main personal-register-main">
+      <ol class="business-stepper" aria-label="个人培训报名业务进度">
+        <li class="is-complete"><span><i data-lucide="check"></i></span><b>选择课程班次</b></li>
+        <li class="is-active"><span>2</span><b>核对资料并提交</b></li>
+        <li><span>3</span><b>培训机构受理</b></li>
+        <li><span>4</span><b>支付报名订单</b></li>
+      </ol>
+
+      <section class="registration-card course-confirmation">
+        <div class="card-heading"><div><h2>建筑信息模型技术员实务班</h2></div><em class="status-chip green">报名中</em></div>
+        <div class="personal-course-facts">
+          <div><small>培训机构</small><b>武汉绿色建造职业培训中心（模拟）</b></div>
+          <div><small>培训时间</small><b>2026-10-12 至 11-15</b></div>
+          <div><small>培训方式</small><b>在线学习 · 48学时</b></div>
+          <div><small>费用合计（包含培训和考试）</small><b class="fee-emphasis">¥1,960</b></div>
+        </div>
+      </section>
+
+      <section class="registration-card identity-card">
+        <div class="card-heading"><div><h2>本人资料</h2></div><a href="07-个人资料与材料.html">维护资料</a></div>
+        <div class="field-list">
+          <div class="field-row"><i data-lucide="user"></i><span>姓名</span><b>李明</b><i data-lucide="check"></i></div>
+          <div class="field-row"><i data-lucide="credit-card"></i><span>证件号码</span><b>4201********1234</b><i data-lucide="check"></i></div>
+          <button type="button" class="field-row" data-edit-field="手机号码"><i data-lucide="smartphone"></i><span>手机号码</span><b>138****5628</b><i data-lucide="chevron-right"></i></button>
+          <button type="button" class="field-row" data-edit-field="所在单位"><i data-lucide="building-2"></i><span>所在单位</span><b>湖北智创建筑工程有限公司</b><i data-lucide="chevron-right"></i></button>
+        </div>
+      </section>
+
+      <section class="registration-card materials-card">
+        <div class="card-heading"><div><h2>本次报名材料</h2></div><span class="material-count" id="materialCount">2/2 已引用</span></div>
+        <button class="upload-row is-uploaded" type="button" data-upload="近期证件照">
+          <span class="upload-icon"><i data-lucide="image"></i></span>
+          <span><b>近期证件照 <em>*</em></b><small>已从个人资料引用 · photo.jpg</small></span>
+          <span class="upload-action"><i data-lucide="check"></i><b>已引用</b></span>
+        </button>
+        <button class="upload-row is-uploaded" type="button" data-upload="学历或从业证明">
+          <span class="upload-icon"><i data-lucide="file-check-2"></i></span>
+          <span><b>学历或从业证明 <em>*</em></b><small>已上传 · work-proof.pdf</small></span>
+          <span class="upload-action"><i data-lucide="check"></i><b>已上传</b></span>
+        </button>
+        <label class="agreement-row">
+          <input id="agreement" type="checkbox" checked>
+          <span class="custom-checkbox"><i data-lucide="check"></i></span>
+          <span>本人已阅读报名须知，确认资料真实有效，并同意培训过程按平台个人报名编号留痕。</span>
+        </label>
+      </section>
+
+    </main>
+
+    <footer class="sticky-actions personal-registration-actions">
+      <button class="outline-button" id="saveDraft" type="button" data-toast="个人报名草稿已保存（演示）">保存草稿</button>
+      <button class="primary-button next-step-button" id="nextStep" type="button">确认提交</button>
+    </footer>
+  </div>
+
+  <div class="sheet-backdrop" id="confirmBackdrop" hidden></div>
+  <section class="bottom-sheet confirm-sheet" id="confirmSheet" aria-modal="true" role="dialog" aria-labelledby="confirmTitle" hidden>
+    <button type="button" class="sheet-close" data-close-confirm aria-label="关闭"><i data-lucide="x"></i></button>
+    <h2 id="confirmTitle">确认提交个人报名</h2>
+    <p>提交后将建立李明本人的个人报名记录</p>
+    <div class="confirm-course"><i data-lucide="bookmark"></i><span><b>建筑信息模型技术员实务班</b><small>2026-10-12 至 11-15　|　在线学习</small></span><strong>¥1,960</strong></div>
+    <dl class="confirm-details">
+      <div><dt>姓名</dt><dd>李明</dd></div>
+      <div><dt>身份证号</dt><dd>4201********1234</dd></div>
+      <div><dt>手机号码</dt><dd>138****5628</dd></div>
+      <div><dt>报名材料</dt><dd>2项有效</dd></div>
+    </dl>
+    <button class="primary-button" id="confirmSubmit" type="button">确认提交个人报名</button>
+  </section>
+
+  <section class="success-view" id="successView" hidden>
+    <span class="success-icon"><i data-lucide="circle-check"></i></span>
+    <h2>个人报名提交成功</h2>
+    <p>平台个人报名编号：HBIC-2026-000128</p>
+    <div class="success-card"><span><small>报名人</small><b>李明</b></span><span><small>当前状态</small><b>待培训机构受理</b></span></div>
+    <a class="primary-button" href="13-培训报名进度.html">查看个人报名进度</a>
+    <a class="secondary-button" href="../首页.html">返回培训首页</a>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="../assets/lucide.min.js"></script>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>培训考试｜工人H5端</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="page-home">
+  <div class="prototype-shell">
+    <header class="app-bar home-app-bar" aria-label="页面顶部">
+      <a class="brand-lockup" href="#top" aria-label="返回培训考试首页">
+        <img src="assets/favicon.svg" alt="湖北省智能建造产业互联网平台标识">
+        <span><b>湖北省智能建造<br>产业互联网平台</b><em>培训考试</em></span>
+      </a>
+      <button class="icon-button notification-button" type="button" data-toast="暂无新的培训通知" aria-label="培训通知">
+        <i data-lucide="bell"></i><span class="notification-dot"></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="home-search" aria-label="课程搜索">
+        <i data-lucide="search"></i>
+        <input id="courseSearch" type="search" placeholder="搜课程、工种或培训班" aria-label="搜课程、工种或培训班">
+      </section>
+
+      <section class="hero" aria-label="培训专题">
+        <img id="heroImage" src="assets/images/banner-nine-occupations.png" alt="智能建造产业工人培训场景">
+        <div class="hero-shade"></div>
+        <div class="hero-copy">
+          <span class="hero-kicker">湖北智能建造人才培养</span>
+          <h1 id="heroTitle">绿色智能建造<br>九大新工种培训启动</h1>
+          <p id="heroText">覆盖数字设计、智能生产、智能施工、智慧运维四大领域，可报名课程持续更新。</p>
+          <a class="hero-link" href="#courses">查看培训课程 <i data-lucide="arrow-right"></i></a>
+        </div>
+        <div class="hero-dots" aria-label="切换专题">
+          <button class="is-active" type="button" data-slide="0" aria-label="专题一"></button>
+          <button type="button" data-slide="1" aria-label="专题二"></button>
+        </div>
+      </section>
+
+      <section class="quick-services" aria-label="快捷服务">
+        <a class="quick-item" href="pages/13-培训报名进度.html">
+          <span class="quick-icon"><i data-lucide="clipboard-check"></i></span>
+          <b>报名进度</b><small>查看我的报名</small>
+        </a>
+        <a class="quick-item" href="pages/15-我的培训.html">
+          <span class="quick-icon"><i data-lucide="graduation-cap"></i></span>
+          <b>我的培训</b><small>学习记录与进度</small>
+        </a>
+        <a class="quick-item" href="pages/04-考试信息.html">
+          <span class="quick-icon"><i data-lucide="calendar-days"></i></span>
+          <b>考试安排</b><small>查看考试计划</small>
+        </a>
+        <a class="quick-item" href="pages/05-证书查验.html">
+          <span class="quick-icon"><i data-lucide="shield-check"></i></span>
+          <b>证书查验</b><small>查询证书真伪</small>
+        </a>
+      </section>
+
+      <section class="occupation-strip" aria-label="培训工种">
+        <div class="occupation-tabs" role="tablist" aria-label="选择培训工种">
+          <button class="is-active" type="button" role="tab" data-category="all">新工种培训</button>
+          <button type="button" role="tab" data-category="bim">建筑信息模型技术员</button>
+          <button type="button" role="tab" data-category="equipment">智能设备施工员</button>
+          <button type="button" role="tab" data-category="construction">装配式建筑施工员</button>
+          <button type="button" role="tab" data-category="operation">智慧运维员</button>
+        </div>
+      </section>
+
+      <section class="section-block course-section" id="courses">
+        <div class="section-heading">
+          <div><span class="section-eyebrow">精选班次</span><h2>推荐课程</h2></div>
+          <a class="text-link" href="pages/02-培训课程.html">查看全部 <i data-lucide="chevron-right"></i></a>
+        </div>
+        <div class="course-grid" id="courseList">
+          <article class="course-card" data-category="bim" data-course-link="pages/03-课程详情.html?course=bim" tabindex="0" role="link" aria-label="查看建筑信息模型技术员实务班详情">
+            <div class="course-poster poster-blue"><span>数字设计</span><i data-lucide="cuboid"></i><b>建筑信息模型技术员</b></div>
+            <div class="course-content">
+              <h3>建筑信息模型技术员实务班</h3>
+              <p>线上 · 48学时</p>
+              <time><i data-lucide="calendar-days"></i>10月12日开班</time>
+              <div class="course-bottom"><strong>¥1,280</strong></div>
+            </div>
+          </article>
+          <article class="course-card" data-category="equipment" data-course-link="pages/03-课程详情.html?course=equipment" tabindex="0" role="link" aria-label="查看智能装备操作员线下实训班详情">
+            <div class="course-poster poster-teal"><span>智能施工</span><i data-lucide="construction"></i><b>智能装备操作员</b></div>
+            <div class="course-content">
+              <h3>智能装备操作员线下实训班</h3>
+              <p>线下 · 48学时</p>
+              <time><i data-lucide="calendar-days"></i>09月28日开班</time>
+              <div class="course-bottom"><strong>¥880</strong></div>
+            </div>
+          </article>
+          <article class="course-card" data-category="construction" data-course-link="pages/03-课程详情.html?course=construction" tabindex="0" role="link" aria-label="查看装配式建筑施工员混合培训班详情">
+            <div class="course-poster poster-cyan"><span>智能施工</span><i data-lucide="blocks"></i><b>装配式建筑施工员</b></div>
+            <div class="course-content">
+              <h3>装配式建筑施工员混合培训班</h3>
+              <p>混合 · 48学时</p>
+              <time><i data-lucide="calendar-days"></i>09月15日开班</time>
+              <div class="course-bottom"><strong>¥980</strong></div>
+            </div>
+          </article>
+          <article class="course-card" data-category="operation" data-course-link="pages/03-课程详情.html?course=operation" tabindex="0" role="link" aria-label="查看建筑设备智慧运维员综合班详情">
+            <div class="course-poster poster-violet"><span>智慧运维</span><i data-lucide="building-cog"></i><b>建筑设备智慧运维员</b></div>
+            <div class="course-content">
+              <h3>建筑设备智慧运维员综合班</h3>
+              <p>混合 · 52学时</p>
+              <time><i data-lucide="calendar-days"></i>10月18日开班</time>
+              <div class="course-bottom"><strong>¥1,260</strong></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block enrollment-section" id="enrollment">
+        <div class="section-heading">
+          <div><span class="section-eyebrow orange">报名进行中</span><h2>近期可报名</h2></div>
+          <a class="text-link" href="pages/02-培训课程.html">查看更多 <i data-lucide="chevron-right"></i></a>
+        </div>
+        <div class="schedule-list">
+          <a href="pages/12-个人培训报名.html?mode=personal" class="schedule-row">
+            <time><b>09-15</b><span>开班</span></time>
+            <span class="schedule-copy"><b>装配式建筑施工员混合培训班</b><small>湖北建造职业培训中心</small><em>报名剩3天</em></span>
+            <i data-lucide="chevron-right"></i>
+          </a>
+          <a href="pages/12-个人培训报名.html?mode=personal" class="schedule-row">
+            <time><b>09-28</b><span>开班</span></time>
+            <span class="schedule-copy"><b>智能装备操作员线下实训班</b><small>智能建造培训分院</small><em>报名剩8天</em></span>
+            <i data-lucide="chevron-right"></i>
+          </a>
+          <a href="pages/08-团队服务.html?course=construction" class="schedule-row">
+            <time><b>10-08</b><span>开班</span></time>
+            <span class="schedule-copy"><b>部品部件质量检测员基础班</b><small>绿色建造职业培训基地</small><em>报名剩12天 · 支持团队报名</em></span>
+            <i data-lucide="chevron-right"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="section-block exam-section" id="exam">
+        <div class="section-heading">
+          <div><span class="section-eyebrow">考培分离</span><h2>考试服务</h2></div>
+        </div>
+        <p class="section-intro">完成规定培训后，由培训机构统一创建送考批次。</p>
+        <div class="exam-actions">
+          <a href="pages/04-考试信息.html"><i data-lucide="calendar-days"></i><span><b>考试安排</b><small>查看全部考试计划</small></span><i data-lucide="chevron-right"></i></a>
+          <a href="pages/22-成绩与复核.html"><i data-lucide="file-search"></i><span><b>成绩查询</b><small>查询考试成绩</small></span><i data-lucide="chevron-right"></i></a>
+        </div>
+        <div class="exam-highlight">
+          <time><b>09-30</b><span>2026</span></time>
+          <span><b>装配式建筑施工员职业技能评价</b><small>报名截止：2026-09-24 17:00 · 武汉市（模拟）</small></span>
+        </div>
+      </section>
+
+      <section class="section-block pathway-section">
+        <div class="section-heading">
+          <div><span class="section-eyebrow">全流程服务</span><h2>培训取证路径</h2></div>
+        </div>
+        <ol class="pathway-list">
+          <li><span><i data-lucide="book-open"></i></span><b>选择课程</b><small>确认适合的课程与班次</small></li>
+          <li><span><i data-lucide="monitor-play"></i></span><b>学习提升</b><small>完成课程学习与练习</small></li>
+          <li><span><i data-lucide="file-pen-line"></i></span><b>参加考试</b><small>培训完成后报名考试</small></li>
+          <li><span><i data-lucide="award"></i></span><b>获取证书</b><small>通过评价后查询证书</small></li>
+        </ol>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="主导航">
+      <a class="is-active" href="#top"><i data-lucide="home"></i><span>首页</span></a>
+      <a href="pages/02-培训课程.html"><i data-lucide="book-open"></i><span>课程</span></a>
+      <a href="pages/15-我的培训.html"><i data-lucide="monitor-play"></i><span>培训</span></a>
+      <a href="pages/04-考试信息.html"><i data-lucide="file-text"></i><span>考试</span></a>
+      <a href="pages/06-我的.html"><i data-lucide="user"></i><span>我的</span></a>
+    </nav>
+  </div>
+
+  <div class="sheet-backdrop" id="loginBackdrop" hidden></div>
+  <section class="bottom-sheet login-sheet" id="loginSheet" aria-modal="true" role="dialog" aria-labelledby="loginTitle" hidden>
+    <button type="button" class="sheet-close" data-close-sheet aria-label="关闭"><i data-lucide="x"></i></button>
+    <span class="sheet-icon"><i data-lucide="user-check"></i></span>
+    <h2 id="loginTitle">登录后继续办理</h2>
+    <p id="loginMessage">登录后可查看个人培训服务和办理进度。</p>
+    <button class="primary-button" type="button" data-demo-login>手机号快捷登录（演示）</button>
+    <button class="secondary-button" type="button" data-close-sheet>暂不登录</button>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/lucide.min.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
