@@ -24,7 +24,7 @@
       background: linear-gradient(180deg, #e9f2ff 0, var(--page) 370px);
     }
     .shell { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
-    header { padding: 68px 0 36px; }
+    header { padding: 38px 0 24px; }
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -37,14 +37,14 @@
     }
     .eyebrow::before { width: 28px; height: 3px; content: ""; background: var(--primary); border-radius: 99px; }
     h1 { margin: 0; color: var(--navy); font-size: clamp(30px, 5vw, 44px); line-height: 1.25; letter-spacing: .02em; }
-    .intro { max-width: 680px; margin: 16px 0 0; color: var(--muted); font-size: 16px; line-height: 1.8; }
+    .intro { max-width: 680px; margin: 12px 0 0; color: var(--muted); font-size: 16px; line-height: 1.7; }
     .summary {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      padding: 18px 22px;
-      margin-bottom: 24px;
+      padding: 14px 18px;
+      margin-bottom: 18px;
       border: 1px solid var(--line);
       border-radius: 12px;
       background: rgba(255,255,255,.76);
@@ -62,13 +62,13 @@
     }
     .rule-trigger { padding: 10px 14px; background: #e8f1ff; color: var(--primary); white-space: nowrap; }
     .rule-trigger:hover { background: #dceaff; }
-    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; padding-bottom: 52px; }
+    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; padding-bottom: 24px; }
     .card {
       position: relative;
       display: flex;
-      min-height: 230px;
+      min-height: 202px;
       flex-direction: column;
-      padding: 28px;
+      padding: 22px 28px;
       overflow: hidden;
       border: 1px solid var(--line);
       border-radius: 16px;
@@ -101,7 +101,7 @@
     }
     h2 { margin: 0; font-size: 20px; line-height: 1.4; }
     .role { margin: 3px 0 0; color: var(--muted); font-size: 13px; }
-    .description { margin: 23px 0 24px; color: #536b8d; font-size: 14px; line-height: 1.75; }
+    .description { margin: 16px 0 18px; color: #536b8d; font-size: 14px; line-height: 1.7; }
     .open {
       z-index: 1;
       display: inline-flex;
@@ -124,7 +124,6 @@
     .platform { --accent: #1a968b; --tint: #e3f7f4; }
     .training { --accent: #6b61d8; --tint: #efedff; }
     .evaluation { --accent: #e37b35; --tint: #fff0e6; }
-    footer { padding: 20px 0 34px; border-top: 1px solid var(--line); color: #8092ac; font-size: 13px; }
     dialog {
       width: min(1160px, calc(100% - 40px));
       max-height: min(760px, calc(100vh - 40px));
@@ -154,7 +153,7 @@
     .rules-table code { padding: 2px 5px; border-radius: 4px; background: #f2f6fb; color: #315887; font-family: Consolas, "Courier New", monospace; font-size: 12px; }
     @media (max-width: 720px) {
       .shell { width: min(100% - 32px, 1160px); }
-      header { padding-top: 44px; }
+      header { padding-top: 34px; }
       .summary { align-items: flex-start; flex-direction: column; }
       .cards { grid-template-columns: 1fr; }
     }
@@ -169,9 +168,8 @@
     </header>
 
     <section class="summary" aria-label="原型说明">
-      <span><strong>访问说明：</strong>四端原型均为静态演示数据，仅用于业务方案交流与原型评审。</span>
+      <span><strong>访问说明：</strong>四端原型均为静态演示数据，仅用于业务方案交流与原型评审；一期业务链路为报名 → 缴费 → 培训 → 送考 → 考试 → 成绩 → 证书。</span>
       <div class="summary-actions">
-        <span>一期业务链路：报名 → 缴费 → 培训 → 送考 → 考试 → 成绩 → 证书</span>
         <button class="rule-trigger" type="button" id="open-number-rules">业务编号规则</button>
       </div>
     </section>
@@ -180,29 +178,28 @@
       <article class="card pc">
         <div class="card-top"><span class="icon">01</span><div><h2>培训考试专区 PC 端</h2><p class="role">学员 / 团队负责人</p></div></div>
         <p class="description">面向产业工人开展课程浏览、报名缴费、培训学习、考试查询及证书查验等业务。</p>
-        <a class="open" href="pc/首页.html">进入专区首页 <span aria-hidden="true">→</span></a>
+        <a class="open" href="pc/首页.html" target="_blank" rel="noopener noreferrer">进入专区首页 <span aria-hidden="true">→</span></a>
       </article>
 
       <article class="card platform">
         <div class="card-top"><span class="icon">02</span><div><h2>平台运营管理端</h2><p class="role">平台运营管理员</p></div></div>
         <p class="description">面向平台运营人员开展专区内容、机构、报名、送考进度及业务档案的运营管理。</p>
-        <a class="open" href="platform/Banner管理.html">进入Banner管理 <span aria-hidden="true">→</span></a>
+        <a class="open" href="platform/Banner管理.html" target="_blank" rel="noopener noreferrer">进入Banner管理 <span aria-hidden="true">→</span></a>
       </article>
 
       <article class="card training">
         <div class="card-top"><span class="icon">03</span><div><h2>培训机构管理端</h2><p class="role">培训机构管理员</p></div></div>
         <p class="description">面向培训机构开展课程班次、报名受理、培训实施、送考提交及考试安排查询。</p>
-        <a class="open" href="training/机构信息.html">进入机构信息 <span aria-hidden="true">→</span></a>
+        <a class="open" href="training/机构信息.html" target="_blank" rel="noopener noreferrer">进入机构信息 <span aria-hidden="true">→</span></a>
       </article>
 
       <article class="card evaluation">
         <div class="card-top"><span class="icon">04</span><div><h2>评价机构管理端</h2><p class="role">评价机构管理员</p></div></div>
         <p class="description">面向评价机构开展考试项目、送考审核、考务执行、成绩发布和证书发放等业务。</p>
-        <a class="open" href="evaluation/机构信息.html">进入机构信息 <span aria-hidden="true">→</span></a>
+        <a class="open" href="evaluation/机构信息.html" target="_blank" rel="noopener noreferrer">进入机构信息 <span aria-hidden="true">→</span></a>
       </article>
     </section>
 
-    <footer>产业工人培训考试取证平台 · HTML 原型演示</footer>
   </main>
 
   <dialog id="number-rules-dialog" aria-labelledby="number-rules-title">
