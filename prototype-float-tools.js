@@ -28,14 +28,23 @@
     return list.map(function (name) { return page(name); });
   }
 
+  // CloudBase static hosting stores Chinese filenames as #Uxxxx object keys.
+  // Keep ordinary filenames for local preview and GitHub Pages.
+  function cloudPath(file) {
+    if (!/tcloudbaseapp\.com$/i.test(location.hostname)) return file;
+    return String(file).replace(/[^\x00-\x7F]/g, function (character) {
+      return "%23U" + character.charCodeAt(0).toString(16);
+    });
+  }
+
   function page(name, children) {
-    return { name: name, file: name + ".html", children: children || [] };
+    return { name: name, file: cloudPath(name + ".html"), children: children || [] };
   }
 
   function route(name, file, children, matchCurrent, defaultCurrent) {
     return {
       name: name,
-      file: file,
+      file: cloudPath(file),
       children: children || [],
       matchCurrent: matchCurrent !== false,
       defaultCurrent: defaultCurrent === true

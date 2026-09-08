@@ -327,5 +327,7 @@ document.addEventListener('DOMContentLoaded',function(){
  document.getElementById('evaluation-audit-confirm').addEventListener('click',()=>{const choice=modal.querySelector('input[name="evaluation-audit-choice"]:checked').value,text=opinion.value.trim();if(!text){error.textContent='请填写审核意见';return;}error.textContent='';showAuditResult(choice,text);modal.classList.remove('open');resultCard.scrollIntoView({behavior:'smooth'});});
 });
 </script>
+  <script src="../prototype-float-tools.js"></script>
 </body>
 </html>
+

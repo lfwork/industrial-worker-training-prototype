@@ -30,4 +30,6 @@ document.addEventListener('DOMContentLoaded',function(){
  modal.querySelectorAll('input[name="audit-choice"]').forEach(r=>r.addEventListener('change',()=>modal.querySelectorAll('.choice-card').forEach(c=>c.classList.toggle('selected',c.contains(r)&&r.checked))));
  document.getElementById('audit-confirm').addEventListener('click',()=>{const choice=modal.querySelector('input[name="audit-choice"]:checked').value,text=opinion.value.trim();if(!text){error.textContent='请填写审核意见';return;}error.textContent='';showAuditResult(choice,text);modal.classList.remove('open');resultCard.scrollIntoView({behavior:'smooth'});});
 });
-</script></body></html>
+</script>  <script src="../prototype-float-tools.js"></script>
+</body></html>
+
