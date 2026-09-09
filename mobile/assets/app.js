@@ -18,6 +18,31 @@
     element.addEventListener('click', () => showToast(element.dataset.toast));
   });
 
+  const informationModal = $('#informationModal');
+  const informationBackdrop = $('#informationBackdrop');
+  const closeInformation = () => {
+    if (!informationModal || !informationBackdrop) return;
+    informationModal.hidden = true;
+    informationBackdrop.hidden = true;
+    document.body.style.overflow = '';
+  };
+  $$('[data-information-detail]').forEach((element) => {
+    element.addEventListener('click', () => {
+      if (!informationModal || !informationBackdrop) return;
+      const title = $('b', element)?.textContent || '';
+      $('#informationModalTitle').textContent = title;
+      $('#informationModalMeta').textContent = `${element.dataset.infoType || '资讯'} · ${element.dataset.infoDate || ''}`;
+      $('#informationModalBody').textContent = element.dataset.infoBody || '';
+      informationModal.hidden = false;
+      informationBackdrop.hidden = false;
+      document.body.style.overflow = 'hidden';
+      if (window.lucide) window.lucide.createIcons();
+    });
+  });
+  $('#informationModalClose')?.addEventListener('click', closeInformation);
+  $('#informationModalConfirm')?.addEventListener('click', closeInformation);
+  informationBackdrop?.addEventListener('click', closeInformation);
+
   function openSheet(sheet, backdrop) {
     sheet.hidden = false;
     backdrop.hidden = false;
@@ -124,6 +149,8 @@
     window.location.replace('08-团队服务.html?source=course');
     return;
   }
+  const registrationProfileLink = $('#registrationProfileLink');
+  if (registrationProfileLink) registrationProfileLink.href = `07-个人资料与材料.html?from=registration&course=${encodeURIComponent(params.get('course') || 'bim')}`;
 
   const uploaded = new Set(['近期证件照', '学历或从业证明']);
 
