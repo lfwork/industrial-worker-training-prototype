@@ -24,7 +24,8 @@
       background: #e9f2ff;
     }
     .shell { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
-    header { padding: 38px 0 24px; }
+    header { position: relative; padding: 38px 0 24px; }
+    .header-actions { position: absolute; top: 38px; right: 0; display: flex; gap: 10px; }
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -62,6 +63,24 @@
     }
     .rule-trigger { padding: 10px 14px; background: #e8f1ff; color: var(--primary); white-space: nowrap; }
     .rule-trigger:hover { background: #dceaff; }
+    .update-trigger, .flow-trigger { background: #e8eef5; color: #52657f; }
+    .update-trigger:hover, .flow-trigger:hover { background: #dfe7f1; }
+    .changelog-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    .changelog-item { padding: 16px 18px; border: 1px solid var(--line); border-radius: 9px; background: #fbfdff; }
+    .changelog-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; color: var(--muted); font-size: 12px; }
+    .changelog-version { padding: 3px 8px; border-radius: 999px; background: #e8f1ff; color: var(--primary); font-family: Consolas, "Courier New", monospace; }
+    .changelog-item h3 { margin: 8px 0 5px; color: var(--text); font-size: 15px; }
+    .changelog-item p { margin: 0; color: #536b8d; font-size: 13px; line-height: 1.7; }
+    .changelog-evidence { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 12px; }
+    .changelog-evidence figure { margin: 0; }
+    .changelog-evidence img { display: block; width: 100%; height: 76px; object-fit: cover; border: 1px solid var(--line); border-radius: 6px; background: #fff; cursor: zoom-in; }
+    .changelog-evidence figcaption { margin-top: 5px; color: var(--muted); font-size: 11px; }
+    .image-preview-dialog { width: min(1240px, calc(100% - 32px)); }
+    .image-preview-dialog .modal-body { display: grid; place-items: center; padding: 16px; }
+    .image-preview-dialog img { display: block; max-width: 100%; max-height: calc(100vh - 150px); object-fit: contain; }
+    .flow-dialog { width: min(1540px, calc(100% - 32px)); }
+    .flow-dialog .modal-body { display: grid; place-items: center; padding: 16px; }
+    .flow-dialog img { display: block; max-width: 100%; max-height: calc(100vh - 150px); object-fit: contain; }
     .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px 18px; padding-bottom: 24px; }
     .card {
       position: relative;
@@ -122,7 +141,7 @@
     .open:hover { transform: translateY(-2px); box-shadow: 0 8px 16px color-mix(in srgb, var(--accent) 28%, transparent); }
     .open:focus-visible { outline: 3px solid #89bbff; outline-offset: 3px; }
     .pc { --accent: #2878f0; --tint: #e8f1ff; }
-    .mobile { --accent: #209b8d; --tint: #e4f7f3; }
+    .mobile { --accent: #71839d; --tint: #eef2f6; }
     .platform { --accent: #1a968b; --tint: #e3f7f4; }
     .training { --accent: #6b61d8; --tint: #efedff; }
     .evaluation { --accent: #e37b35; --tint: #fff0e6; }
@@ -160,6 +179,7 @@
     @media (max-width: 720px) {
       .shell { width: min(100% - 32px, 1160px); }
       header { padding-top: 34px; }
+      .header-actions { position: static; margin-top: 14px; flex-wrap: wrap; }
       .summary { align-items: flex-start; flex-direction: column; }
       .cards { grid-template-columns: 1fr; }
       .card, .card.compact { grid-column: span 1; }
@@ -172,6 +192,7 @@
       <p class="eyebrow">PROTOTYPE COLLECTION</p>
       <h1>产业工人培训考试取证平台</h1>
       <p class="intro">一期业务原型集合。请选择应用端进入其菜单栏首个页面，体验对应角色的业务页面与交互。</p>
+      <div class="header-actions"><button class="rule-trigger flow-trigger" type="button" id="open-flow">业务流程</button><button class="rule-trigger update-trigger" type="button" id="open-changelog">更新日志</button></div>
     </header>
 
     <section class="summary" aria-label="原型说明">
@@ -232,6 +253,7 @@
           <tr><td>评价机构编号</td><td><code>PJJG-YYYY-4位流水</code></td><td><code>PJJG-2026-0008</code></td><td>评价机构端－机构信息；平台端－评价机构管理。平台端个别原型页面现写作 <code>PJ</code> 前缀，统一以 <code>PJJG</code> 为准。</td></tr>
           <tr><td>考试项目编号</td><td><code>PJ-YYYY-4位流水</code></td><td><code>PJ-2026-0028</code></td><td>评价机构端－考试项目列表；平台端－考试管理</td></tr>
           <tr><td>送考批次号</td><td><code>SKPC-YYYYMMDD-4位流水</code></td><td><code>SKPC-20260820-0006</code></td><td>培训机构端－送考批次、送考审核反馈；平台端－送考批次台账、送考进度；评价机构端－送考批次</td></tr>
+          <tr><td>送考缴费单号</td><td><code>SKJF-YYYYMMDD-4位流水</code></td><td><code>SKJF-20260910-0001</code></td><td>培训机构端－送考缴费；评价机构端－送考订单；平台运营端－送考订单</td></tr>
           <tr><td>考试批次号</td><td><code>KSPC-YYYYMMDD-4位流水</code></td><td><code>KSPC-20260918-0002</code></td><td>培训机构端－考试安排查询；评价机构端－考试批次、成绩管理、成绩发布、证书发放</td></tr>
           <tr><td>准考证号</td><td><code>ZK+YYYYMMDD+4位流水</code></td><td><code>ZK202609180086</code></td><td>PC端－考试安排；培训机构端－考试安排查询；评价机构端－准考证管理、成绩管理</td></tr>
           <tr><td>证书编号</td><td><code>HBCERT-YYYY-6位流水</code></td><td><code>HBCERT-2026-000128</code></td><td>PC端－我的培训考试、证书查验；平台端－证书档案；评价机构端－证书发放</td></tr>
@@ -242,12 +264,61 @@
       </table>
     </div>
   </dialog>
+  <dialog id="flow-dialog" class="flow-dialog" aria-labelledby="flow-title">
+    <div class="modal-head">
+      <div><h2 id="flow-title">业务流程</h2><p>产业工人培训考试取证平台业务流程与资金流。</p></div>
+      <button class="modal-close" type="button" aria-label="关闭" id="close-flow">×</button>
+    </div>
+    <div class="modal-body"><img src="assets/business-flow.png" alt="产业工人培训考试取证系统业务流程与资金流图"></div>
+  </dialog>
+  <dialog id="image-preview-dialog" class="image-preview-dialog" aria-labelledby="image-preview-title">
+    <div class="modal-head">
+      <div><h2 id="image-preview-title">更新内容截图</h2><p id="image-preview-caption">点击关闭返回更新日志。</p></div>
+      <button class="modal-close" type="button" aria-label="关闭" id="close-image-preview">×</button>
+    </div>
+    <div class="modal-body"><img id="image-preview" alt="更新内容放大截图"></div>
+  </dialog>
+  <dialog id="changelog-dialog" aria-labelledby="changelog-title">
+    <div class="modal-head">
+      <div><h2 id="changelog-title">更新日志</h2><p>记录本期原型集合的主要功能更新，细节修复不单独列项。</p></div>
+      <button class="modal-close" type="button" aria-label="关闭" id="close-changelog">×</button>
+    </div>
+    <div class="modal-body">
+      <ol class="changelog-list">
+        <li class="changelog-item"><div class="changelog-meta"><span>2026-09-02</span><span class="changelog-version">V1.0.0</span></div><h3>首次发布原型集合页</h3><p>汇总 PC 端、移动端、平台运营端、培训机构端和评价机构端原型，建立统一入口。</p></li>
+        <li class="changelog-item"><div class="changelog-meta"><span>2026-09-02</span><span class="changelog-version">V1.0.0</span></div><h3>增加业务编号规则</h3><p>增加业务编号规则弹窗，集中展示平台报名编号、送考批次号、送考缴费单号、考试批次号、准考证号、证书编号等规则及适用页面。</p></li>
+        <li class="changelog-item"><div class="changelog-meta"><span>2026-09-03</span><span class="changelog-version">V1.0.0</span></div><h3>增加移动端原型并刷新 PC 端</h3><p>集合页新增移动端入口，并同步刷新 PC 端原型版本。</p></li>
+        <li class="changelog-item"><div class="changelog-meta"><span>2026-09-08</span><span class="changelog-version">V1.0.0</span></div><h3>补充各端页面导航与功能说明</h3><p>为各端页面补充页面导航和功能说明悬浮工具，支持端内页面跳转和业务说明查看。</p></li>
+        <li class="changelog-item"><div class="changelog-meta"><span>2026-09-09</span><span class="changelog-version">V1.0.0</span></div><h3>更新移动端主要功能</h3><p>新增和完善个人资料、培训机构详情、评价项目详情等页面，补充证件材料展示，并调整移动端页面交互和样式。</p></li>
+        <li class="changelog-item"><div class="changelog-meta"><span>2026-09-11</span><span class="changelog-version">V1.0.0</span></div><h3>补充送考缴费与账户信息维护功能</h3><p>新增培训机构端、评价机构端和平台运营端的送考缴费相关功能；新增培训机构和评价机构的账户信息维护。</p><div class="changelog-evidence"><figure><img src="assets/update-log-20260911/送考缴费相关-培训机构端.png" alt="培训机构端送考缴费相关更新，红框标记更新区域"><figcaption>培训机构端 · 送考缴费</figcaption></figure><figure><img src="assets/update-log-20260911/送考缴费相关-评价机构端.png" alt="评价机构端送考订单相关更新，红框标记更新区域"><figcaption>评价机构端 · 送考订单</figcaption></figure><figure><img src="assets/update-log-20260911/送考缴费相关-平台运营端.png" alt="平台运营端送考订单相关更新，红框标记更新区域"><figcaption>平台运营端 · 送考订单</figcaption></figure><figure><img src="assets/update-log-20260911/账户信息维护-培训机构端.png" alt="培训机构端账户信息维护更新，红框标记更新区域"><figcaption>培训机构端 · 账户信息维护</figcaption></figure><figure><img src="assets/update-log-20260911/账户信息维护-评价机构端.png" alt="评价机构端账户信息维护更新，红框标记更新区域"><figcaption>评价机构端 · 账户信息维护</figcaption></figure></div></li>
+      </ol>
+    </div>
+  </dialog>
   <script>
     (function () {
       var dialog = document.getElementById('number-rules-dialog');
+      var changelog = document.getElementById('changelog-dialog');
+      var flow = document.getElementById('flow-dialog');
+      var imagePreview = document.getElementById('image-preview-dialog');
       document.getElementById('open-number-rules').addEventListener('click', function () { dialog.showModal(); });
       document.getElementById('close-number-rules').addEventListener('click', function () { dialog.close(); });
       dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });
+      document.getElementById('open-changelog').addEventListener('click', function () { changelog.showModal(); });
+      document.getElementById('close-changelog').addEventListener('click', function () { changelog.close(); });
+      changelog.addEventListener('click', function (event) { if (event.target === changelog) changelog.close(); });
+      document.getElementById('open-flow').addEventListener('click', function () { flow.showModal(); });
+      document.getElementById('close-flow').addEventListener('click', function () { flow.close(); });
+      flow.addEventListener('click', function (event) { if (event.target === flow) flow.close(); });
+      document.querySelectorAll('.changelog-evidence img').forEach(function (image) {
+        image.addEventListener('click', function () {
+          document.getElementById('image-preview').src = image.src;
+          document.getElementById('image-preview').alt = image.alt;
+          document.getElementById('image-preview-caption').textContent = image.closest('figure').querySelector('figcaption').textContent + '｜点击关闭返回更新日志。';
+          imagePreview.showModal();
+        });
+      });
+      document.getElementById('close-image-preview').addEventListener('click', function () { imagePreview.close(); });
+      imagePreview.addEventListener('click', function (event) { if (event.target === imagePreview) imagePreview.close(); });
     }());
   </script>
 </body>
